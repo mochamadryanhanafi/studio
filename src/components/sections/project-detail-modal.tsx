@@ -4,6 +4,7 @@ import type { Project } from '@/lib/data';
 import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { useTranslation } from '@/lib/i18n';
 
 interface ProjectDetailModalProps {
   project: Project | null;
@@ -12,6 +13,7 @@ interface ProjectDetailModalProps {
 }
 
 export default function ProjectDetailModal({ project, isOpen, onOpenChange }: ProjectDetailModalProps) {
+  const { t } = useTranslation();
   if (!project) return null;
 
   const allImages = [project.imageUrl, ...project.detailImageUrls];
@@ -54,7 +56,7 @@ export default function ProjectDetailModal({ project, isOpen, onOpenChange }: Pr
               </DialogDescription>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground">Keywords</h4>
+              <h4 className="font-semibold text-foreground">{t('projectModal.keywords')}</h4>
               <p className="text-foreground/80">{project.keywords}</p>
             </div>
           </div>

@@ -7,19 +7,21 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 import ProjectDetailModal from './project-detail-modal';
+import { useTranslation } from '@/lib/i18n';
 
 const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const { t } = useTranslation();
 
   return (
     <>
       <section id="portfolio" className="py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            My Portfolio
+            {t('portfolio.title')}
           </h2>
           <p className="mt-6 text-lg leading-8 text-foreground/80">
-            Here are some of the projects I'm proud to have worked on. Each one represents a unique challenge and a step forward in my journey as a developer.
+            {t('portfolio.subtitle')}
           </p>
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
@@ -49,7 +51,7 @@ const PortfolioSection = () => {
                  <div className="flex gap-2">
                     <Button asChild variant="outline" onClick={(e) => e.stopPropagation()}>
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        Live Demo <ExternalLink className="ml-2 h-4 w-4" />
+                        {t('portfolio.liveDemo')} <ExternalLink className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
                     <Button asChild variant="outline" onClick={(e) => e.stopPropagation()}>

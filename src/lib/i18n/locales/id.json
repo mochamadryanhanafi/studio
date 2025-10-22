@@ -1,0 +1,66 @@
+{
+  "header": {
+    "about": "Tentang",
+    "portfolio": "Portofolio",
+    "certificates": "Sertifikat",
+    "contact": "Kontak"
+  },
+  "footer": {
+    "rights": "Hak Cipta Dilindungi"
+  },
+  "hero": {
+    "title": "Menciptakan Realitas Digital",
+    "subtitle": "Selamat datang di Kanvas Digital saya, kumpulan proyek pilihan di mana desain bertemu inovasi. Jelajahi karya saya di dunia pengembangan web modern dan teknologi terdesentralisasi."
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "paragraph1": "Saya seorang pengembang dan desainer yang bersemangat dengan perhatian tajam untuk menciptakan pengalaman digital yang indah, fungsional, dan berpusat pada pengguna. Dengan latar belakang di bidang seni dan ilmu komputer, saya senang menjembatani kesenjangan antara estetika dan teknologi.",
+    "paragraph2": "Perjalanan saya ke dunia web3 didorong oleh ketertarikan pada sistem terdesentralisasi dan potensi yang mereka miliki untuk masa depan digital yang lebih adil. Saya berspesialisasi dalam membangun aplikasi web dan dApps yang responsif dan berkinerja tinggi dari awal.",
+    "skillset": "Keahlian Saya"
+  },
+  "portfolio": {
+    "title": "Portofolio Saya",
+    "subtitle": "Berikut adalah beberapa proyek yang saya banggakan. Masing-masing merupakan tantangan unik dan langkah maju dalam perjalanan saya sebagai pengembang.",
+    "liveDemo": "Demo Langsung"
+  },
+  "certificates": {
+    "title": "Sertifikat & Kredensial",
+    "subtitle": "Kumpulan sertifikasi dan kredensial profesional saya, yang menunjukkan komitmen saya untuk terus belajar dan menjadi ahli."
+  },
+  "contact": {
+    "title": "Hubungi Saya",
+    "subtitle": "Punya proyek atau hanya ingin menyapa? Saya akan senang mendengar dari Anda.",
+    "form": {
+      "name": {
+        "label": "Nama",
+        "placeholder": "Nama Anda"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "email.anda@example.com"
+      },
+      "message": {
+        "label": "Pesan",
+        "placeholder": "Ceritakan tentang proyek atau ide Anda..."
+      },
+      "button": {
+        "send": "Kirim Pesan",
+        "sending": "Mengirim..."
+      }
+    },
+    "toast": {
+      "success": {
+        "title": "Sukses!"
+      },
+      "error": {
+        "title": "Kesalahan"
+      }
+    }
+  },
+  "projectModal": {
+    "keywords": "Kata Kunci"
+  },
+  "certificateModal": {
+    "verify": "Verifikasi Kredensial"
+  }
+}

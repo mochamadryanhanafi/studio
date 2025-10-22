@@ -2,25 +2,25 @@
 
 import { useState } from 'react';
 import { certificates, type Certificate } from '@/lib/data';
-import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Award } from 'lucide-react';
-import { Button } from '../ui/button';
+import { Award } from 'lucide-react';
 import CertificateDetailModal from './certificate-detail-modal';
+import { useTranslation } from '@/lib/i18n';
 
 const CertificatesSection = () => {
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+  const { t } = useTranslation();
 
   return (
     <>
       <section id="certificates" className="py-24 sm:py-32">
         <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            Certificates & Credentials
+            {t('certificates.title')}
           </h2>
           <p className="mt-6 text-lg leading-8 text-foreground/80">
-            A collection of my professional certifications and credentials, showcasing my commitment to continuous learning and expertise.
+            {t('certificates.subtitle')}
           </p>
         </div>
         <div className="mt-16 mx-auto max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">

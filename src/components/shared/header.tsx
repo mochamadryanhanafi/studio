@@ -1,19 +1,27 @@
 "use client";
-import { Code, Menu } from 'lucide-react';
+import { Code, Menu, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
 import { ThemeToggle } from '../theme-toggle';
-
-const navLinks = [
-  { href: '#about', label: 'About' },
-  { href: '#portfolio', label: 'Portfolio' },
-  { href: '#certificates', label: 'Certificates' },
-  { href: '#contact', label: 'Contact' },
-];
+import { useTranslation } from '@/lib/i18n';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, setLanguage, language } = useTranslation();
+
+  const navLinks = [
+    { href: '#about', label: t('header.about') },
+    { href: '#portfolio', label: t('header.portfolio') },
+    { href: '#certificates', label: t('header.certificates') },
+    { href: '#contact', label: t('header.contact') },
+  ];
 
   const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
@@ -36,6 +44,22 @@ const Header = () => {
           ))}
         </nav>
         <div className="flex flex-1 items-center justify-end space-x-2">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Languages className="h-[1.2rem] w-[1.2rem]" />
+                  <span className="sr-only">Toggle language</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setLanguage('en')} disabled={language === 'en'}>
+                  English
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setLanguage('id')} disabled={language === 'id'}>
+                  Indonesia
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
            <ThemeToggle />
           <div className='md:hidden'>
             <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>

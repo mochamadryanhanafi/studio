@@ -1,25 +1,29 @@
+"use client";
+
 import { skills } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
+import { useTranslation } from '@/lib/i18n';
 
 const AboutSection = () => {
+  const { t } = useTranslation();
   return (
     <section id="about" className="py-24 sm:py-32">
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
         <div className="lg:col-span-3">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-            About Me
+            {t('about.title')}
           </h2>
           <p className="mt-6 text-lg leading-8 text-foreground/80">
-            I am a passionate developer and designer with a keen eye for creating beautiful, functional, and user-centric digital experiences. With a background in both art and computer science, I thrive on bridging the gap between aesthetics and technology.
+            {t('about.paragraph1')}
           </p>
           <p className="mt-4 text-lg leading-8 text-foreground/80">
-            My journey into the world of web3 has been driven by a fascination with decentralized systems and the potential they hold for a more equitable digital future. I specialize in building responsive, high-performance web applications and dApps from the ground up.
+            {t('about.paragraph2')}
           </p>
         </div>
         <div className="lg:col-span-2">
           <div className="p-6 rounded-lg bg-card border border-border/60 shadow-lg">
             <h3 className="font-headline text-2xl font-bold text-foreground text-center">
-              My Skillset
+              {t('about.skillset')}
             </h3>
             <div className="mt-6 flex flex-wrap justify-center gap-3">
               {skills.map((skill) => (

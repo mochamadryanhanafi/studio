@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Button } from '../ui/button';
 import { ExternalLink } from 'lucide-react';
+import { useTranslation } from '@/lib/i18n';
 
 interface CertificateDetailModalProps {
   certificate: Certificate | null;
@@ -13,6 +14,7 @@ interface CertificateDetailModalProps {
 }
 
 export default function CertificateDetailModal({ certificate, isOpen, onOpenChange }: CertificateDetailModalProps) {
+  const { t } = useTranslation();
   if (!certificate) return null;
 
   return (
@@ -35,7 +37,7 @@ export default function CertificateDetailModal({ certificate, isOpen, onOpenChan
             <div className='text-center'>
                  <Button asChild variant="outline">
                   <a href={certificate.link} target="_blank" rel="noopener noreferrer">
-                    Verify Credential <ExternalLink className="ml-2 h-4 w-4" />
+                    {t('certificateModal.verify')} <ExternalLink className="ml-2 h-4 w-4" />
                   </a>
                 </Button>
             </div>
