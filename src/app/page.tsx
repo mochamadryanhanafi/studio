@@ -16,10 +16,10 @@ export default function Home() {
         <HeroSection />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AboutSection />
+          <ProfileCalloutSection />
           <PortfolioSection />
           <CertificatesSection />
           <GalleryCarouselSection />
-          <ProfileCalloutSection />
           <ContactSection />
         </div>
       </main>
