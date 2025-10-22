@@ -2,7 +2,7 @@
 
 import Hero3D from '@/components/interactive/hero-3d';
 import { Badge } from '@/components/ui/badge';
-import { skills } from '@/lib/data';
+import { skills, type Skill } from '@/lib/data';
 import { useTranslation } from '@/lib/i18n';
 
 const HeroSection = () => {
@@ -19,8 +19,8 @@ const HeroSection = () => {
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 delay-400">
           {skills.slice(0, 5).map((skill) => (
-            <Badge key={skill} variant="default" className="text-sm py-2 px-4 shadow-md text-primary-foreground">
-              {skill}
+            <Badge key={skill.name} variant="default" className="text-sm py-2 px-4 shadow-md text-primary-foreground">
+              {skill.name}
             </Badge>
           ))}
         </div>

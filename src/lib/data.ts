@@ -1,4 +1,5 @@
 import { placeholderImages } from './placeholder-images.json';
+import EthersJSIcon from '@/components/icons/ethers-js-icon';
 
 export type Project = {
   id: number;
@@ -28,6 +29,11 @@ export type GalleryImage = {
   imageUrl: string;
   imageHint: string;
 };
+
+export type Skill = {
+  name: string;
+  icon?: React.ComponentType<{ className?: string }>;
+}
 
 export const projects: Project[] = [
   {
@@ -101,9 +107,19 @@ export const certificates: Certificate[] = [
   },
 ];
 
-export const skills = [
-  "React", "Next.js", "TypeScript", "Node.js", "GraphQL", "Solidity",
-  "PostgreSQL", "Docker", "Figma", "UI/UX Design", "Web3", "Ethers.js"
+export const skills: Skill[] = [
+  { name: "React" },
+  { name: "Next.js" },
+  { name: "TypeScript" },
+  { name: "Node.js" },
+  { name: "GraphQL" },
+  { name: "Solidity" },
+  { name: "PostgreSQL" },
+  { name: "Docker" },
+  { name: "Figma" },
+  { name: "UI/UX Design" },
+  { name: "Web3" },
+  { name: "Ethers.js", icon: EthersJSIcon },
 ];
 
 export const galleryImages: GalleryImage[] = placeholderImages.slice(12);
