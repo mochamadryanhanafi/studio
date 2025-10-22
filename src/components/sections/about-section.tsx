@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 sm:py-32">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
         <div className="lg:col-span-3">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             About Me
@@ -26,7 +26,7 @@ const AboutSection = () => {
                 <Badge 
                   key={skill} 
                   variant="default" 
-                  className="text-sm py-2 px-4 shadow-md hover:shadow-accent/40 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+                  className="text-sm py-2 px-4 shadow-md text-primary-foreground hover:shadow-accent/40 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
                 >
                   {skill}
                 </Badge>

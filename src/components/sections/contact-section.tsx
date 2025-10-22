@@ -51,7 +51,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
         <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Get In Touch
         </h2>
@@ -59,7 +59,7 @@ const ContactSection = () => {
           Have a project in mind or just want to say hello? I'd love to hear from you.
         </p>
       </div>
-      <div className="mx-auto mt-16 max-w-xl">
+      <div className="mx-auto mt-16 max-w-xl animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
             <FormField

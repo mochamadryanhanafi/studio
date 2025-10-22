@@ -14,7 +14,7 @@ const PortfolioSection = () => {
   return (
     <>
       <section id="portfolio" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             My Portfolio
           </h2>
@@ -22,7 +22,7 @@ const PortfolioSection = () => {
             Here are some of the projects I'm proud to have worked on. Each one represents a unique challenge and a step forward in my journey as a developer.
           </p>
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
           {projects.map((project) => (
             <Card 
               key={project.id} 

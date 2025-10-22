@@ -10,7 +10,7 @@ import { Button } from '../ui/button';
 const CertificatesSection = () => {
   return (
     <section id="certificates" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl text-center">
+      <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
         <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           Certificates & Credentials
         </h2>
@@ -18,7 +18,7 @@ const CertificatesSection = () => {
           A collection of my professional certifications and credentials, showcasing my commitment to continuous learning and expertise.
         </p>
       </div>
-      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
+      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
         {certificates.map((cert) => (
           <Card 
             key={cert.id} 
