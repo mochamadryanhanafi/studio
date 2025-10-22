@@ -4,7 +4,6 @@ import { skills, type Skill } from '@/lib/data';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from '@/lib/i18n';
 import Image from 'next/image';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../ui/tooltip';
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -38,24 +37,13 @@ const AboutSection = () => {
            <h3 className="font-headline text-2xl font-bold text-foreground text-center">
             {t('about.skillset')}
           </h3>
-          <TooltipProvider>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-3 justify-center">
               {skills.map((skill) => (
-                <Tooltip key={skill.name}>
-                  <TooltipTrigger asChild>
-                    <div 
-                      className="cursor-pointer p-3 rounded-lg shadow-md text-primary-foreground bg-primary hover:bg-primary/80 transition-all duration-300 transform hover:scale-110 flex items-center justify-center h-14 w-14"
-                    >
-                      {skill.icon ? <skill.icon className="h-7 w-7" /> : null}
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>{skill.name}</p>
-                  </TooltipContent>
-                </Tooltip>
+                <Badge key={skill.name} variant="default" className="text-sm py-2 px-4 shadow-md">
+                  {skill.name}
+                </Badge>
               ))}
             </div>
-          </TooltipProvider>
         </div>
       </div>
     </section>
