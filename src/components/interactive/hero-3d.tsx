@@ -25,7 +25,7 @@ const Hero3D = () => {
 
     const geometry = new THREE.IcosahedronGeometry(1, 0);
 
-    const color = resolvedTheme === 'dark' ? 0xff0000 : 0x8F00FF;
+    const color = 0xff0000;
 
     const material = new THREE.MeshStandardMaterial({
       color: color,
