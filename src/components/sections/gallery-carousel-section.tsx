@@ -21,7 +21,7 @@ export default function GalleryCarouselSection() {
           </p>
         </div>
       <div className="w-full overflow-hidden">
-        <div className="flex animate-scroll-x group hover:animation-pause">
+        <div className="flex animate-scroll-x">
           {duplicatedImages.map((image, index) => (
             <div key={index} className="flex-shrink-0 w-full sm:w-1/2 md:w-[450px] p-3">
                 <Card className="overflow-hidden">
