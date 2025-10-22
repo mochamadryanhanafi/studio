@@ -23,6 +23,36 @@
       "description": "A complete branding and identity design for a tech startup.",
       "imageUrl": "https://images.unsplash.com/photo-1670341447004-606a07fcfaa7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxicmFuZGluZyUyMGxvZ298ZW58MHx8fHwxNzYxMDMyMDA0fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "branding logo"
+    },
+    {
+      "id": "detail-1",
+      "imageUrl": "https://images.unsplash.com/photo-1610466896927-699424f3c86d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxhYnN0cmFjdCUyMGNvZGV8ZW58MHx8fHwxNzYxMDA4ODcyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract code"
+    },
+    {
+      "id": "detail-2",
+      "imageUrl": "https://images.unsplash.com/photo-1635939412822-8f3ee593d147?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHVpfGVufDB8fHx8MTc2MTA1NzY1N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract ui"
+    },
+    {
+      "id": "detail-3",
+      "imageUrl": "https://images.unsplash.com/photo-1674854174272-6647b379e87d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8YWJzdHJhY3QlMjBtb2JpbGV8ZW58MHx8fHwxNzYxMDk1NDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract mobile"
+    },
+    {
+      "id": "detail-4",
+      "imageUrl": "https://images.unsplash.com/photo-1606918340643-e56051f3242c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMGNoYXJ0c3xlbnwwfHx8fDE3NjEwNzk1ODV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract charts"
+    },
+    {
+      "id": "detail-5",
+      "imageUrl": "https://images.unsplash.com/photo-1689307300540-e3a2313cd6a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGJyYW5kaW5nfGVufDB8fHx8MTc2MTA5NTQ5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract branding"
+    },
+    {
+      "id": "detail-6",
+      "imageUrl": "https://images.unsplash.com/photo-1557264337-e8a93017fe92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMHRlY2h8ZW58MHx8fHwxNzYxMDM5OTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract tech"
     }
   ]
 }

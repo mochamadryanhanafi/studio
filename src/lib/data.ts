@@ -6,6 +6,7 @@ export type Project = {
   description: string;
   imageUrl: string;
   imageHint: string;
+  detailImageUrls: string[];
   projectContext: string;
   keywords: string;
   link: string;
@@ -19,6 +20,7 @@ export const projects: Project[] = [
     description: "A futuristic web platform for decentralized applications.",
     imageUrl: placeholderImages[0].imageUrl,
     imageHint: placeholderImages[0].imageHint,
+    detailImageUrls: [placeholderImages[4].imageUrl, placeholderImages[5].imageUrl],
     projectContext: "Project Alpha is a cutting-edge platform built with Next.js and Solidity, aimed at revolutionizing dApp interactions.",
     keywords: "web3, blockchain, decentralized, react, nextjs",
     link: "#",
@@ -30,6 +32,7 @@ export const projects: Project[] = [
     description: "A sleek mobile application for seamless asset management.",
     imageUrl: placeholderImages[1].imageUrl,
     imageHint: placeholderImages[1].imageHint,
+    detailImageUrls: [placeholderImages[6].imageUrl],
     projectContext: "Project Beta is a native mobile app for iOS and Android that allows users to track and manage their digital assets in real-time.",
     keywords: "mobile, finance, asset management, react native",
     link: "#",
@@ -41,6 +44,7 @@ export const projects: Project[] = [
     description: "An interactive data visualization dashboard for market trends.",
     imageUrl: placeholderImages[2].imageUrl,
     imageHint: placeholderImages[2].imageHint,
+    detailImageUrls: [placeholderImages[7].imageUrl, placeholderImages[8].imageUrl],
     projectContext: "Project Gamma uses D3.js and React to create dynamic and interactive charts that help users understand complex market data.",
     keywords: "data, visualization, d3, react, dashboard",
     link: "#",
@@ -52,6 +56,7 @@ export const projects: Project[] = [
     description: "A complete branding and identity design for a tech startup.",
     imageUrl: placeholderImages[3].imageUrl,
     imageHint: placeholderImages[3].imageHint,
+    detailImageUrls: [placeholderImages[9].imageUrl],
     projectContext: "The Project Delta branding project involved creating a unique visual identity, including logo, color palette, and typography, for a new AI startup.",
     keywords: "branding, design, logo, identity, marketing",
     link: "#",
