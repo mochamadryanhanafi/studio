@@ -1,0 +1,65 @@
+import { placeholderImages } from './placeholder-images.json';
+
+export type Project = {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  imageHint: string;
+  projectContext: string;
+  keywords: string;
+  link: string;
+  github: string;
+};
+
+export const projects: Project[] = [
+  {
+    id: 1,
+    title: "Project Alpha",
+    description: "A futuristic web platform for decentralized applications.",
+    imageUrl: placeholderImages[0].imageUrl,
+    imageHint: placeholderImages[0].imageHint,
+    projectContext: "Project Alpha is a cutting-edge platform built with Next.js and Solidity, aimed at revolutionizing dApp interactions.",
+    keywords: "web3, blockchain, decentralized, react, nextjs",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 2,
+    title: "Project Beta",
+    description: "A sleek mobile application for seamless asset management.",
+    imageUrl: placeholderImages[1].imageUrl,
+    imageHint: placeholderImages[1].imageHint,
+    projectContext: "Project Beta is a native mobile app for iOS and Android that allows users to track and manage their digital assets in real-time.",
+    keywords: "mobile, finance, asset management, react native",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 3,
+    title: "Project Gamma",
+    description: "An interactive data visualization dashboard for market trends.",
+    imageUrl: placeholderImages[2].imageUrl,
+    imageHint: placeholderImages[2].imageHint,
+    projectContext: "Project Gamma uses D3.js and React to create dynamic and interactive charts that help users understand complex market data.",
+    keywords: "data, visualization, d3, react, dashboard",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 4,
+    title: "Project Delta",
+    description: "A complete branding and identity design for a tech startup.",
+    imageUrl: placeholderImages[3].imageUrl,
+    imageHint: placeholderImages[3].imageHint,
+    projectContext: "The Project Delta branding project involved creating a unique visual identity, including logo, color palette, and typography, for a new AI startup.",
+    keywords: "branding, design, logo, identity, marketing",
+    link: "#",
+    github: "#",
+  }
+];
+
+export const skills = [
+  "React", "Next.js", "TypeScript", "Node.js", "GraphQL", "Solidity",
+  "PostgreSQL", "Docker", "Figma", "UI/UX Design", "Web3", "Ethers.js"
+];
