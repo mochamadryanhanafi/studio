@@ -23,7 +23,7 @@ export default function GalleryCarouselSection() {
       <div className="w-full overflow-hidden">
         <div className="flex animate-scroll-x group hover:animation-pause">
           {duplicatedImages.map((image, index) => (
-            <div key={index} className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
+            <div key={index} className="flex-shrink-0 w-full sm:w-1/2 md:w-[450px] p-3">
                 <Card className="overflow-hidden">
                   <CardContent className="p-0">
                     <div className="aspect-video relative">
