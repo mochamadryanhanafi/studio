@@ -2,12 +2,14 @@
 
 import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
+import { useTheme } from 'next-themes';
 
 const Hero3D = () => {
   const mountRef = useRef<HTMLDivElement>(null);
+  const { resolvedTheme } = useTheme();
 
   useEffect(() => {
-    if (!mountRef.current) return;
+    if (!mountRef.current || !resolvedTheme) return;
 
     const currentMount = mountRef.current;
     
@@ -22,8 +24,11 @@ const Hero3D = () => {
     currentMount.appendChild(renderer.domElement);
 
     const geometry = new THREE.IcosahedronGeometry(1, 0);
+
+    const color = resolvedTheme === 'dark' ? 0xff0000 : 0x8F00FF;
+
     const material = new THREE.MeshStandardMaterial({
-      color: 0x8F00FF, // Violet accent color
+      color: color,
       wireframe: true,
       roughness: 0.5,
       metalness: 0.5,
@@ -82,7 +87,7 @@ const Hero3D = () => {
         currentMount.removeChild(renderer.domElement);
       }
     };
-  }, []);
+  }, [resolvedTheme]);
 
   return <div ref={mountRef} className="absolute inset-0 z-0 h-full w-full opacity-30" />;
 };
