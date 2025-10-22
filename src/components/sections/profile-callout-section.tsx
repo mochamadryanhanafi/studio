@@ -6,7 +6,7 @@ const ProfileCalloutSection = () => {
   return (
     <section className="py-12 animate-in fade-in duration-700 ease-out">
         <div className="flex flex-col items-center text-center">
-            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-lg mb-4">
+            <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10 mb-4">
                 <Image
                     src="https://picsum.photos/seed/avatar/200/200"
                     alt="Profile Picture"
