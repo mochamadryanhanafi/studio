@@ -1,12 +1,15 @@
 "use client";
 
-import { projects } from '@/lib/data';
+import { useState } from 'react';
+import { projects, type Project } from '@/lib/data';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
+import ProjectDetailModal from './project-detail-modal';
 
 const PortfolioSection = () => {
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
     <>
@@ -21,7 +24,11 @@ const PortfolioSection = () => {
         </div>
         <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12">
           {projects.map((project) => (
-            <Card key={project.id} className="flex flex-col overflow-hidden bg-background/50 border-border/60 shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1">
+            <Card 
+              key={project.id} 
+              className="flex flex-col overflow-hidden bg-background/50 border-border/60 shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer"
+              onClick={() => setSelectedProject(project)}
+            >
               <CardHeader>
                 <div className="aspect-video overflow-hidden rounded-lg border">
                   <Image
@@ -40,12 +47,12 @@ const PortfolioSection = () => {
               </CardContent>
               <CardFooter className="flex-col items-start gap-4">
                  <div className="flex gap-2">
-                    <Button asChild variant="outline">
+                    <Button asChild variant="outline" onClick={(e) => e.stopPropagation()}>
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
                         Live Demo <ExternalLink className="ml-2 h-4 w-4" />
                       </a>
                     </Button>
-                    <Button asChild variant="outline">
+                    <Button asChild variant="outline" onClick={(e) => e.stopPropagation()}>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="mr-2 h-4 w-4" /> GitHub
                       </a>
@@ -56,6 +63,11 @@ const PortfolioSection = () => {
           ))}
         </div>
       </section>
+      <ProjectDetailModal 
+        project={selectedProject} 
+        isOpen={!!selectedProject} 
+        onOpenChange={(isOpen) => !isOpen && setSelectedProject(null)} 
+      />
     </>
   );
 };
