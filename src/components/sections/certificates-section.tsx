@@ -1,57 +1,57 @@
 'use client';
 
-import { certificates } from '@/lib/data';
+import { useState } from 'react';
+import { certificates, type Certificate } from '@/lib/data';
 import Image from 'next/image';
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, Award } from 'lucide-react';
 import { Button } from '../ui/button';
+import CertificateDetailModal from './certificate-detail-modal';
 
 const CertificatesSection = () => {
+  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
+
   return (
-    <section id="certificates" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
-        <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-          Certificates & Credentials
-        </h2>
-        <p className="mt-6 text-lg leading-8 text-foreground/80">
-          A collection of my professional certifications and credentials, showcasing my commitment to continuous learning and expertise.
-        </p>
-      </div>
-      <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
-        {certificates.map((cert) => (
-          <Card 
-            key={cert.id} 
-            className="flex flex-col overflow-hidden bg-background/50 border-border/60 shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1"
-          >
-            <CardHeader className='p-0'>
-              <div className="aspect-video overflow-hidden">
-                <Image
-                  src={cert.imageUrl}
-                  alt={cert.title}
-                  width={800}
-                  height={600}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  data-ai-hint={cert.imageHint}
-                />
+    <>
+      <section id="certificates" className="py-24 sm:py-32">
+        <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
+          <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Certificates & Credentials
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-foreground/80">
+            A collection of my professional certifications and credentials, showcasing my commitment to continuous learning and expertise.
+          </p>
+        </div>
+        <div className="mt-16 mx-auto max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
+          {certificates.map((cert) => (
+            <Card
+              key={cert.id}
+              className="group flex items-center overflow-hidden bg-background/50 border-border/60 shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer"
+              onClick={() => setSelectedCertificate(cert)}
+            >
+              <CardHeader className="p-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                  <Award className="h-6 w-6" />
+                </div>
+              </CardHeader>
+              <CardContent className="flex-grow p-4">
+                <p className="font-headline text-lg font-semibold">{cert.title}</p>
+                <p className="text-sm text-foreground/70">{cert.issuer}</p>
+              </CardContent>
+              <div className="p-4">
+                 <Badge variant="secondary">{cert.year}</Badge>
               </div>
-            </CardHeader>
-            <CardContent className="flex-grow p-6">
-              <CardTitle className="font-headline text-2xl">{cert.title}</CardTitle>
-              <p className="mt-2 text-base text-foreground/70">{cert.issuer}</p>
-            </CardContent>
-            <CardFooter className="p-6 pt-0 flex justify-between items-center">
-               <Badge variant="secondary">{cert.year}</Badge>
-               <Button asChild variant="outline" size="sm">
-                  <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                    Verify <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
-                </Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-    </section>
+            </Card>
+          ))}
+        </div>
+      </section>
+      <CertificateDetailModal
+        certificate={selectedCertificate}
+        isOpen={!!selectedCertificate}
+        onOpenChange={(isOpen) => !isOpen && setSelectedCertificate(null)}
+      />
+    </>
   );
 };
 
