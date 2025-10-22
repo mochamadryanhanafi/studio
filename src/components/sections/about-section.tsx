@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge';
 const AboutSection = () => {
   return (
     <section id="about" className="py-24 sm:py-32">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start">
         <div className="lg:col-span-3">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             About Me
@@ -17,15 +17,21 @@ const AboutSection = () => {
           </p>
         </div>
         <div className="lg:col-span-2">
-          <h3 className="font-headline text-2xl font-bold text-foreground">
-            My Skillset
-          </h3>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {skills.map((skill) => (
-              <Badge key={skill} variant="secondary" className="text-sm py-1 px-3 bg-accent/10 text-accent-foreground border-accent/20 hover:bg-accent/20">
-                {skill}
-              </Badge>
-            ))}
+          <div className="p-6 rounded-lg bg-card border border-border/60 shadow-lg">
+            <h3 className="font-headline text-2xl font-bold text-foreground text-center">
+              My Skillset
+            </h3>
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+              {skills.map((skill) => (
+                <Badge 
+                  key={skill} 
+                  variant="secondary" 
+                  className="text-sm py-2 px-4 bg-accent/10 text-accent-foreground border-accent/20 hover:bg-accent/20 transition-all duration-300 ease-in-out transform hover:scale-105"
+                >
+                  {skill}
+                </Badge>
+              ))}
+            </div>
           </div>
         </div>
       </div>
