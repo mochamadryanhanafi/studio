@@ -25,18 +25,20 @@ const Hero3D = () => {
 
     const geometry = new THREE.IcosahedronGeometry(1, 0);
 
-    const color = 0xff0000;
+    const color = 0x9400D3; // Ungu
 
     const material = new THREE.MeshStandardMaterial({
       color: color,
       wireframe: true,
       roughness: 0.5,
       metalness: 0.5,
+      emissive: color, // Untuk efek menyala
+      emissiveIntensity: 0.5,
     });
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    // Use HemisphereLight for better ambient lighting in both themes
+    // Gunakan HemisphereLight untuk pencahayaan ambient yang lebih baik di kedua tema
     const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.5);
     scene.add(hemisphereLight);
 
@@ -59,10 +61,10 @@ const Hero3D = () => {
       requestAnimationFrame(animate);
       const elapsedTime = clock.getElapsedTime();
 
-      // Subtle rotation
+      // Rotasi halus
       mesh.rotation.y = .2 * elapsedTime;
 
-      // Mouse follow effect
+      // Efek mengikuti mouse
       camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.05;
       camera.position.y += (mouseY * 0.5 - camera.position.y) * 0.05;
       camera.lookAt(scene.position);

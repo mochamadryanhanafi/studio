@@ -33,7 +33,7 @@ const About3D = () => {
     particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     
     const particleMaterial = new THREE.PointsMaterial({
-        color: 0xff0000,
+        color: 0x9400D3, // Ungu
         size: 0.8,
         sizeAttenuation: true
     });
@@ -42,7 +42,7 @@ const About3D = () => {
     scene.add(particleSystem);
     
     const lineMaterial = new THREE.LineBasicMaterial({
-        color: 0xff0000,
+        color: 0x9400D3, // Ungu
         opacity: 0.2,
         transparent: true
     });
