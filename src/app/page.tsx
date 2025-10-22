@@ -5,6 +5,7 @@ import AboutSection from '@/components/sections/about-section';
 import PortfolioSection from '@/components/sections/portfolio-section';
 import ContactSection from '@/components/sections/contact-section';
 import CertificatesSection from '@/components/sections/certificates-section';
+import ProfileCalloutSection from '@/components/sections/profile-callout-section';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           <AboutSection />
           <PortfolioSection />
           <CertificatesSection />
+          <ProfileCalloutSection />
           <ContactSection />
         </div>
       </main>
