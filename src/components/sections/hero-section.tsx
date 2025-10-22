@@ -1,17 +1,10 @@
 "use client";
 
-import { Button } from '@/components/ui/button';
 import Hero3D from '@/components/interactive/hero-3d';
-import { ArrowDown } from 'lucide-react';
+import { Badge } from '@/components/ui/badge';
+import { skills } from '@/lib/data';
 
 const HeroSection = () => {
-
-  const handleScrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
-
   return (
     <section className="relative w-full h-[calc(100dvh-3.5rem)] min-h-[500px] flex items-center justify-center text-center overflow-hidden">
       <Hero3D />
@@ -22,11 +15,12 @@ const HeroSection = () => {
         <p className="mt-6 max-w-2xl text-lg text-foreground/80 sm:text-xl animate-in fade-in slide-in-from-bottom-10 duration-1000 ease-out delay-200">
           Welcome to my Digital Canvas, a curated collection of projects where design meets innovation. Explore my work in the world of modern web development and decentralized technologies.
         </p>
-        <div className="mt-10 flex items-center justify-center gap-x-6 animate-in fade-in slide-in-from-bottom-12 duration-1000 ease-out delay-400">
-          <Button size="lg" onClick={handleScrollToContact}>
-            Get in Touch
-            <ArrowDown className="ml-2 h-5 w-5" />
-          </Button>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-12 duration-1000 ease-out delay-400">
+          {skills.slice(0, 5).map((skill) => (
+            <Badge key={skill} variant="secondary" className="text-sm py-2 px-4 bg-accent/10 text-accent-foreground border-accent/20">
+              {skill}
+            </Badge>
+          ))}
         </div>
       </div>
     </section>
