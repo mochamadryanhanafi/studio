@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from '@/components/ui/button';
 import Hero3D from '@/components/interactive/hero-3d';
 import { ArrowDown } from 'lucide-react';
