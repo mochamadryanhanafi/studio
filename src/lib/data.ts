@@ -13,6 +13,17 @@ export type Project = {
   github: string;
 };
 
+export type Certificate = {
+  id: number;
+  title: string;
+  issuer: string;
+  year: string;
+  imageUrl: string;
+  imageHint: string;
+  link: string;
+};
+
+
 export const projects: Project[] = [
   {
     id: 1,
@@ -62,6 +73,27 @@ export const projects: Project[] = [
     link: "#",
     github: "#",
   }
+];
+
+export const certificates: Certificate[] = [
+  {
+    id: 1,
+    title: "Certified Kubernetes Administrator",
+    issuer: "Cloud Native Computing Foundation",
+    year: "2023",
+    imageUrl: placeholderImages[10].imageUrl,
+    imageHint: placeholderImages[10].imageHint,
+    link: "#",
+  },
+  {
+    id: 2,
+    title: "Google Professional Cloud Architect",
+    issuer: "Google Cloud",
+    year: "2022",
+    imageUrl: placeholderImages[11].imageUrl,
+    imageHint: placeholderImages[11].imageHint,
+    link: "#",
+  },
 ];
 
 export const skills = [

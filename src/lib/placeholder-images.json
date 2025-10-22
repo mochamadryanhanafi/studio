@@ -46,13 +46,23 @@
     },
     {
       "id": "detail-5",
-      "imageUrl": "https://images.unsplash.com/photo-1689307300540-e3a2313cd6a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGJyYW5kaW5nfGVufDB8fHx8MTc2MTA5NTQ5OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1689307300540-e3a2313cd6a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGJyYW5kaW5nfGVufDB8fHx8MTc2MTA5NTQ5OHww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "abstract branding"
     },
     {
       "id": "detail-6",
       "imageUrl": "https://images.unsplash.com/photo-1557264337-e8a93017fe92?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhYnN0cmFjdCUyMHRlY2h8ZW58MHx8fHwxNzYxMDM5OTQ4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract tech"
+    },
+    {
+      "id": "certificate-1",
+      "imageUrl": "https://images.unsplash.com/photo-1715173679369-18006e84d6a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjZXJ0aWZpY2F0ZSUyMGFic3RyYWN0fGVufDB8fHx8MTc2MDk4NTAyNXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "certificate abstract"
+    },
+    {
+      "id": "certificate-2",
+      "imageUrl": "https://images.unsplash.com/photo-1666968881524-226746362f13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhd2FyZCUyMGFic3RyYWN0fGVufDB8fHx8MTc2MTA5NjMzOXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "award abstract"
     }
   ]
 }

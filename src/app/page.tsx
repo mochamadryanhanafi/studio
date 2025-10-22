@@ -4,6 +4,7 @@ import HeroSection from '@/components/sections/hero-section';
 import AboutSection from '@/components/sections/about-section';
 import PortfolioSection from '@/components/sections/portfolio-section';
 import ContactSection from '@/components/sections/contact-section';
+import CertificatesSection from '@/components/sections/certificates-section';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <AboutSection />
           <PortfolioSection />
+          <CertificatesSection />
           <ContactSection />
         </div>
       </main>
