@@ -16,32 +16,43 @@ const About3D = () => {
     const scene = new THREE.Scene();
     
     const camera = new THREE.PerspectiveCamera(75, currentMount.clientWidth / currentMount.clientHeight, 0.1, 1000);
-    camera.position.z = 2;
+    camera.position.z = 50;
 
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(currentMount.clientWidth, currentMount.clientHeight);
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
-
-    const geometry = new THREE.TorusKnotGeometry(0.8, 0.25, 100, 16);
-
-    const color = 0xff0000;
-
-    const material = new THREE.MeshStandardMaterial({
-      color: color,
-      wireframe: true,
-      roughness: 0.5,
-      metalness: 0.5,
-    });
-    const mesh = new THREE.Mesh(geometry, material);
-    scene.add(mesh);
     
-    const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x444444, 2);
-    scene.add(hemisphereLight);
+    const particleCount = 200;
+    const particles = new THREE.BufferGeometry();
+    const positions = new Float32Array(particleCount * 3);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1.5);
-    pointLight.position.set(2, 3, 4);
-    scene.add(pointLight);
+    for (let i = 0; i < particleCount * 3; i++) {
+        positions[i] = (Math.random() - 0.5) * 100;
+    }
+    particles.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+    
+    const particleMaterial = new THREE.PointsMaterial({
+        color: 0xff0000,
+        size: 0.8,
+        sizeAttenuation: true
+    });
+    
+    const particleSystem = new THREE.Points(particles, particleMaterial);
+    scene.add(particleSystem);
+    
+    const lineMaterial = new THREE.LineBasicMaterial({
+        color: 0xff0000,
+        opacity: 0.2,
+        transparent: true
+    });
+
+    const linesGeometry = new THREE.BufferGeometry();
+    const linePositions = new Float32Array(particleCount * particleCount * 3);
+    linesGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+    
+    const linesMesh = new THREE.LineSegments(linesGeometry, lineMaterial);
+    scene.add(linesMesh);
 
     let mouseX = 0;
     let mouseY = 0;
@@ -58,12 +69,34 @@ const About3D = () => {
     const animate = () => {
       requestAnimationFrame(animate);
       const elapsedTime = clock.getElapsedTime();
+      
+      particleSystem.rotation.y = elapsedTime * 0.1;
 
-      mesh.rotation.x = .1 * elapsedTime;
-      mesh.rotation.y = .2 * elapsedTime;
+      const posAttribute = particles.getAttribute('position') as THREE.BufferAttribute;
+      const linePosAttribute = linesGeometry.getAttribute('position') as THREE.BufferAttribute;
+      let vertexCount = 0;
 
-      camera.position.x += (mouseX * 0.2 - camera.position.x) * 0.02;
-      camera.position.y += (mouseY * 0.2 - camera.position.y) * 0.02;
+      for (let i = 0; i < particleCount; i++) {
+        for (let j = i + 1; j < particleCount; j++) {
+          const dx = posAttribute.getX(i) - posAttribute.getX(j);
+          const dy = posAttribute.getY(i) - posAttribute.getY(j);
+          const dz = posAttribute.getZ(i) - posAttribute.getZ(j);
+          const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+          
+          if (dist < 15) {
+            linePosAttribute.setXYZ(vertexCount, posAttribute.getX(i), posAttribute.getY(i), posAttribute.getZ(i));
+            vertexCount++;
+            linePosAttribute.setXYZ(vertexCount, posAttribute.getX(j), posAttribute.getY(j), posAttribute.getZ(j));
+            vertexCount++;
+          }
+        }
+      }
+      
+      linePosAttribute.needsUpdate = true;
+      linesGeometry.setDrawRange(0, vertexCount);
+
+      camera.position.x += (mouseX * 5 - camera.position.x) * 0.05;
+      camera.position.y += (mouseY * 5 - camera.position.y) * 0.05;
       camera.lookAt(scene.position);
 
       renderer.render(scene, camera);
@@ -88,7 +121,7 @@ const About3D = () => {
     };
   }, [resolvedTheme]);
 
-  return <div ref={mountRef} className="absolute inset-0 z-0 h-full w-full" />;
+  return <div ref={mountRef} className="absolute inset-0 z-0 h-full w-full opacity-30" />;
 };
 
 export default About3D;

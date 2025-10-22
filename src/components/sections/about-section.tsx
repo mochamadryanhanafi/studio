@@ -8,10 +8,11 @@ import About3D from '../interactive/about-3d';
 const AboutSection = () => {
   const { t } = useTranslation();
   return (
-    <section id="about" className="py-24 sm:py-32">
-      <div className="flex flex-col gap-16 animate-in fade-in duration-700 ease-out">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 max-w-xl">
+    <section id="about" className="py-24 sm:py-32 relative">
+      <About3D />
+      <div className="flex flex-col gap-16 animate-in fade-in duration-700 ease-out relative z-10">
+        <div className="grid grid-cols-1 items-center">
+            <div className="space-y-6 max-w-2xl mx-auto text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t('about.title')}
               </h2>
@@ -19,9 +20,6 @@ const AboutSection = () => {
                 <p>{t('about.paragraph1')}</p>
                 <p>{t('about.paragraph2')}</p>
               </div>
-            </div>
-            <div className="relative h-64 md:h-full w-full">
-              <About3D />
             </div>
         </div>
 
