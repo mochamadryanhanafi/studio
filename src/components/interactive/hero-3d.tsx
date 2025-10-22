@@ -83,7 +83,6 @@ const Hero3D = () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', onMouseMove);
       if (currentMount) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
         currentMount.removeChild(renderer.domElement);
       }
     };
