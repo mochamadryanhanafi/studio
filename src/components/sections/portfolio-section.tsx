@@ -28,7 +28,7 @@ const PortfolioSection = () => {
           {projects.map((project) => (
             <Card 
               key={project.id} 
-              className="flex flex-col overflow-hidden bg-background/50 border-border/60 shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer"
+              className="flex flex-col overflow-hidden bg-background/50 border-accent/20 shadow-lg shadow-accent/5 transition-all hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer hover:border-accent/40"
               onClick={() => setSelectedProject(project)}
             >
               <CardHeader>
