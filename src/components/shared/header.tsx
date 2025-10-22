@@ -1,8 +1,9 @@
 "use client";
-import { Code, Menu, X } from 'lucide-react';
+import { Code, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
+import { ThemeToggle } from '../theme-toggle';
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -33,28 +34,31 @@ const Header = () => {
             </a>
           ))}
         </nav>
-        <div className="flex flex-1 items-center justify-end md:hidden">
-          <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right">
-              <div className="flex flex-col space-y-4 p-4">
-                 <a href="#" className="mr-6 flex items-center space-x-2 mb-4">
-                    <Code className="h-6 w-6 text-accent" />
-                    <span className="font-bold font-headline">Digital Canvas</span>
-                </a>
-                {navLinks.map(({ href, label }) => (
-                  <a key={label} href={href} onClick={(e) => handleLinkClick(e, href)} className="text-lg font-medium text-foreground transition-colors hover:text-accent">
-                    {label}
+        <div className="flex flex-1 items-center justify-end space-x-2">
+           <ThemeToggle />
+          <div className='md:hidden'>
+            <Sheet open={isMenuOpen} onOpenChange={setIsMenuOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="icon">
+                  <Menu className="h-6 w-6" />
+                  <span className="sr-only">Open Menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right">
+                <div className="flex flex-col space-y-4 p-4">
+                  <a href="#" className="mr-6 flex items-center space-x-2 mb-4">
+                      <Code className="h-6 w-6 text-accent" />
+                      <span className="font-bold font-headline">Digital Canvas</span>
                   </a>
-                ))}
-              </div>
-            </SheetContent>
-          </Sheet>
+                  {navLinks.map(({ href, label }) => (
+                    <a key={label} href={href} onClick={(e) => handleLinkClick(e, href)} className="text-lg font-medium text-foreground transition-colors hover:text-accent">
+                      {label}
+                    </a>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
     </header>
