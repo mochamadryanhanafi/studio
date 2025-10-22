@@ -1,36 +1,29 @@
 "use client";
 
-import * as React from "react";
 import Image from "next/image";
-import Autoplay from "embla-carousel-autoplay";
-
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { galleryImages } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from "@/lib/i18n";
 
 export default function GalleryCarouselSection() {
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
-  );
+  const { t } = useTranslation();
+  // Duplicate images for a seamless loop
+  const duplicatedImages = [...galleryImages, ...galleryImages];
 
   return (
     <section id="gallery" className="py-24 sm:py-32 animate-in fade-in duration-700 ease-out">
-      <Carousel
-        plugins={[plugin.current]}
-        className="w-full"
-        onMouseEnter={plugin.current.stop}
-        onMouseLeave={plugin.current.reset}
-      >
-        <CarouselContent>
-          {galleryImages.map((image) => (
-            <CarouselItem key={image.id}>
-              <div className="p-1">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            {t('gallery.title')}
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-foreground/80">
+            {t('gallery.subtitle')}
+          </p>
+        </div>
+      <div className="w-full overflow-hidden">
+        <div className="flex animate-scroll-x group hover:animation-pause">
+          {duplicatedImages.map((image, index) => (
+            <div key={index} className="flex-shrink-0 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2">
                 <Card className="overflow-hidden">
                   <CardContent className="p-0">
                     <div className="aspect-video relative">
@@ -44,13 +37,10 @@ export default function GalleryCarouselSection() {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
-            </CarouselItem>
+            </div>
           ))}
-        </CarouselContent>
-        <CarouselPrevious className="ml-16" />
-        <CarouselNext className="mr-16"/>
-      </Carousel>
+        </div>
+      </div>
     </section>
   );
 }
