@@ -1,5 +1,6 @@
 import { placeholderImages } from './placeholder-images.json';
 import EthersJSIcon from '@/components/icons/ethers-js-icon';
+import { Code, Server, Database, GitBranch, PenTool, Wind, Layers, Settings, Puzzle, Cpu } from 'lucide-react';
 
 export type Project = {
   id: number;
@@ -108,17 +109,17 @@ export const certificates: Certificate[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: "React" },
-  { name: "Next.js" },
-  { name: "TypeScript" },
-  { name: "Node.js" },
-  { name: "GraphQL" },
-  { name: "Solidity" },
-  { name: "PostgreSQL" },
-  { name: "Docker" },
-  { name: "Figma" },
-  { name: "UI/UX Design" },
-  { name: "Web3" },
+  { name: "React", icon: Code },
+  { name: "Next.js", icon: Code },
+  { name: "TypeScript", icon: Code },
+  { name: "Node.js", icon: Server },
+  { name: "GraphQL", icon: GitBranch },
+  { name: "Solidity", icon: Cpu },
+  { name: "PostgreSQL", icon: Database },
+  { name: "Docker", icon: Layers },
+  { name: "Figma", icon: PenTool },
+  { name: "UI/UX Design", icon: Puzzle },
+  { name: "Web3", icon: Wind },
   { name: "Ethers.js", icon: EthersJSIcon },
 ];
 
