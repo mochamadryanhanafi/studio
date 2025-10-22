@@ -1,21 +1,12 @@
 "use client";
 
-import { useState } from 'react';
-import { projects, type Project } from '@/lib/data';
+import { projects } from '@/lib/data';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Sparkles } from 'lucide-react';
-import ImproveDescriptionModal from '@/components/ai/improve-description-modal';
+import { ExternalLink, Github } from 'lucide-react';
 
 const PortfolioSection = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const handleImproveClick = (project: Project) => {
-    setSelectedProject(project);
-    setIsModalOpen(true);
-  };
 
   return (
     <>
@@ -60,19 +51,11 @@ const PortfolioSection = () => {
                       </a>
                     </Button>
                 </div>
-                <Button variant="link" className="p-0 h-auto text-accent hover:text-accent/80" onClick={() => handleImproveClick(project)}>
-                  Improve with AI <Sparkles className="ml-2 h-4 w-4" />
-                </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
       </section>
-      <ImproveDescriptionModal 
-        project={selectedProject}
-        isOpen={isModalOpen}
-        onOpenChange={setIsModalOpen}
-      />
     </>
   );
 };
