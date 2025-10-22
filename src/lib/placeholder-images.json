@@ -63,6 +63,31 @@
       "id": "certificate-2",
       "imageUrl": "https://images.unsplash.com/photo-1666968881524-226746362f13?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxhd2FyZCUyMGFic3RyYWN0fGVufDB8fHx8MTc2MTA5NjMzOXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "award abstract"
+    },
+    {
+      "id": "gallery-1",
+      "imageUrl": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzYxMDU2OTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract technology"
+    },
+    {
+      "id": "gallery-2",
+      "imageUrl": "https://images.unsplash.com/photo-1643569556871-91ec60671ed7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxtaW5pbWFsaXN0JTIwZGVzaWdufGVufDB8fHx8MTc2MTA0MjE4OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "minimalist design"
+    },
+    {
+      "id": "gallery-3",
+      "imageUrl": "https://images.unsplash.com/photo-1574848296471-28f79a036f79?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MHx8fHwxNzYxMDc2OTIwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern architecture"
+    },
+    {
+      "id": "gallery-4",
+      "imageUrl": "https://images.unsplash.com/photo-1760548425425-e42e77fa38f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb2RlJTIwaW50ZXJmYWNlfGVufDB8fHx8MTc2MTA5NzgwN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "code interface"
+    },
+    {
+      "id": "gallery-5",
+      "imageUrl": "https://images.unsplash.com/photo-1641984790242-d8aa477d306c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwYXJ0fGVufDB8fHx8MTc2MDk2OTA0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital art"
     }
   ]
 }

@@ -23,6 +23,11 @@ export type Certificate = {
   link: string;
 };
 
+export type GalleryImage = {
+  id: string;
+  imageUrl: string;
+  imageHint: string;
+};
 
 export const projects: Project[] = [
   {
@@ -100,3 +105,5 @@ export const skills = [
   "React", "Next.js", "TypeScript", "Node.js", "GraphQL", "Solidity",
   "PostgreSQL", "Docker", "Figma", "UI/UX Design", "Web3", "Ethers.js"
 ];
+
+export const galleryImages: GalleryImage[] = placeholderImages.slice(12);
