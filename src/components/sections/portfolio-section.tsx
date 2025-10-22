@@ -16,7 +16,7 @@ const PortfolioSection = () => {
   return (
     <>
       <section id="portfolio" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
+        <div className="mx-auto max-w-2xl text-center animate-in fade-in duration-700 ease-out">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t('portfolio.title')}
           </h2>
@@ -24,7 +24,7 @@ const PortfolioSection = () => {
             {t('portfolio.subtitle')}
           </p>
         </div>
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 animate-in fade-in duration-700 ease-out">
           {projects.map((project) => (
             <Card 
               key={project.id} 

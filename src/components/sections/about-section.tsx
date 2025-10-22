@@ -8,7 +8,7 @@ const AboutSection = () => {
   const { t } = useTranslation();
   return (
     <section id="about" className="py-24 sm:py-32">
-      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-start animate-in fade-in duration-700 ease-out">
         <div className="lg:col-span-3">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t('about.title')}

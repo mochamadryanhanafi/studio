@@ -15,7 +15,7 @@ const CertificatesSection = () => {
   return (
     <>
       <section id="certificates" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-2xl text-center animate-in fade-in slide-in-from-bottom-8 duration-700 ease-out">
+        <div className="mx-auto max-w-2xl text-center animate-in fade-in duration-700 ease-out">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t('certificates.title')}
           </h2>
@@ -23,7 +23,7 @@ const CertificatesSection = () => {
             {t('certificates.subtitle')}
           </p>
         </div>
-        <div className="mt-16 mx-auto max-w-3xl space-y-6 animate-in fade-in slide-in-from-bottom-12 duration-700 ease-out">
+        <div className="mt-16 mx-auto max-w-3xl space-y-6 animate-in fade-in duration-700 ease-out">
           {certificates.map((cert) => (
             <Card
               key={cert.id}
