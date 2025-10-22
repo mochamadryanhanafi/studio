@@ -25,8 +25,8 @@ const AboutSection = () => {
               {skills.map((skill) => (
                 <Badge 
                   key={skill} 
-                  variant="secondary" 
-                  className="text-sm py-2 px-4 bg-accent/10 text-white border-accent/20 shadow-md hover:bg-accent/20 hover:shadow-accent/20 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+                  variant="default" 
+                  className="text-sm py-2 px-4 shadow-md hover:shadow-accent/40 hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
                 >
                   {skill}
                 </Badge>
