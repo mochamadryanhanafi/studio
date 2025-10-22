@@ -17,7 +17,7 @@ const HeroSection = () => {
         </p>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4 animate-in fade-in slide-in-from-bottom-12 duration-1000 ease-out delay-400">
           {skills.slice(0, 5).map((skill) => (
-            <Badge key={skill} variant="secondary" className="text-sm py-2 px-4 bg-accent/10 text-accent-foreground border-accent/20">
+            <Badge key={skill} variant="default" className="text-sm py-2 px-4 shadow-md text-primary-foreground">
               {skill}
             </Badge>
           ))}
