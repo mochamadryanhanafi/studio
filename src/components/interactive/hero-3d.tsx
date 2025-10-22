@@ -36,10 +36,11 @@ const Hero3D = () => {
     const mesh = new THREE.Mesh(geometry, material);
     scene.add(mesh);
 
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.1);
-    scene.add(ambientLight);
+    // Use HemisphereLight for better ambient lighting in both themes
+    const hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x444444, 0.5);
+    scene.add(hemisphereLight);
 
-    const pointLight = new THREE.PointLight(0xffffff, 3.0);
+    const pointLight = new THREE.PointLight(0xffffff, 1.5);
     pointLight.position.set(2, 3, 4);
     scene.add(pointLight);
 
