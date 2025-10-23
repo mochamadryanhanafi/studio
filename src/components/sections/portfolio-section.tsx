@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -5,17 +6,24 @@ import { projects, type Project } from '@/lib/data';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, ChevronDown, ChevronUp } from 'lucide-react';
+import { ExternalLink, Github, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
 import ProjectDetailModal from './project-detail-modal';
 import { useTranslation } from '@/lib/i18n';
 import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
+import ImproveDescriptionModal from '../ai/improve-description-modal';
 
 const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [projectToImprove, setProjectToImprove] = useState<Project | null>(null);
   const [showAll, setShowAll] = useState(false);
   const { t } = useTranslation();
 
   const projectsToShow = showAll ? projects : projects.slice(0, 4);
+
+  const handleImproveClick = (e: React.MouseEvent, project: Project) => {
+    e.stopPropagation();
+    setProjectToImprove(project);
+  };
 
   return (
     <>
@@ -34,24 +42,33 @@ const PortfolioSection = () => {
               {projectsToShow.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="flex flex-col overflow-hidden bg-background/50 border-accent/20 shadow-lg shadow-accent/5 transition-all hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer hover:border-accent/40"
+                  className="group flex flex-col overflow-hidden bg-background/50 border-accent/20 shadow-lg shadow-accent/5 transition-all hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer hover:border-accent/40"
                   onClick={() => setSelectedProject(project)}
                 >
-                  <CardHeader>
-                    <div className="aspect-video overflow-hidden rounded-lg border">
-                      <Image
-                        src={project.imageUrl}
-                        alt={project.title}
-                        width={800}
-                        height={600}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                        data-ai-hint={project.imageHint}
-                      />
+                   <div className="relative">
+                    <div className="aspect-video overflow-hidden">
+                        <Image
+                            src={project.imageUrl}
+                            alt={project.title}
+                            width={800}
+                            height={600}
+                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                            data-ai-hint={project.imageHint}
+                        />
                     </div>
+                    <Button 
+                      size="sm" 
+                      className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      onClick={(e) => handleImproveClick(e, project)}
+                    >
+                      Improve <Sparkles className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
+                  <CardHeader>
+                    <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
-                    <p className="mt-2 text-base text-foreground/70">{project.description}</p>
+                    <p className="mt-2 text-base text-foreground/70 line-clamp-3">{project.description}</p>
                   </CardContent>
                   <CardFooter className="flex-col items-start gap-4">
                      <div className="flex gap-2">
@@ -83,10 +100,20 @@ const PortfolioSection = () => {
       <ProjectDetailModal 
         project={selectedProject} 
         isOpen={!!selectedProject} 
-        onOpenChange={(isOpen) => !isOpen && setSelectedProject(null)} 
+        onOpenChange={(isOpen) => !isOpen && setSelectedProject(null)}
+        onImproveDescription={(project) => {
+          setSelectedProject(null);
+          setProjectToImprove(project);
+        }}
+      />
+      <ImproveDescriptionModal
+        project={projectToImprove}
+        isOpen={!!projectToImprove}
+        onOpenChange={(isOpen) => !isOpen && setProjectToImprove(null)}
       />
     </>
   );
 };
 
 export default PortfolioSection;
+

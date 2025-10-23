@@ -1,19 +1,27 @@
+
 "use client";
 
+import { useState } from 'react';
 import type { Project } from '@/lib/data';
 import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
+import { ExternalLink, Github, Sparkles } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
+import ImproveDescriptionModal from '../ai/improve-description-modal';
 
 interface ProjectDetailModalProps {
   project: Project | null;
   isOpen: boolean;
   onOpenChange: (isOpen: boolean) => void;
+  onImproveDescription: (project: Project) => void;
 }
 
-export default function ProjectDetailModal({ project, isOpen, onOpenChange }: ProjectDetailModalProps) {
+export default function ProjectDetailModal({ project, isOpen, onOpenChange, onImproveDescription }: ProjectDetailModalProps) {
   const { t } = useTranslation();
+  
   if (!project) return null;
 
   const allImages = [project.imageUrl, ...project.detailImageUrls];
@@ -23,45 +31,66 @@ export default function ProjectDetailModal({ project, isOpen, onOpenChange }: Pr
       <DialogContent className="sm:max-w-3xl">
         <DialogHeader>
           <DialogTitle className="font-headline text-2xl">{project.title}</DialogTitle>
+          <DialogDescription>{project.description}</DialogDescription>
         </DialogHeader>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
-          <div>
-            <Carousel className="w-full">
-              <CarouselContent>
-                {allImages.map((img, index) => (
-                  <CarouselItem key={index}>
-                    <div className="aspect-video relative overflow-hidden rounded-lg border">
-                      <Image
-                        src={img}
-                        alt={`${project.title} - image ${index + 1}`}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              {allImages.length > 1 && (
-                <>
-                  <CarouselPrevious className="left-2" />
-                  <CarouselNext className="right-2" />
-                </>
-              )}
-            </Carousel>
-          </div>
+        <div className="space-y-6 pt-4">
+          <Carousel className="w-full">
+            <CarouselContent>
+              {allImages.map((img, index) => (
+                <CarouselItem key={index}>
+                  <div className="aspect-video relative overflow-hidden rounded-lg border">
+                    <Image
+                      src={img}
+                      alt={`${project.title} - image ${index + 1}`}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={project.imageHint}
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {allImages.length > 1 && (
+              <>
+                <CarouselPrevious className="left-2" />
+                <CarouselNext className="right-2" />
+              </>
+            )}
+          </Carousel>
+          
           <div className="space-y-4">
+            <p className="text-base text-foreground/80">
+              {project.projectContext}
+            </p>
+
             <div>
-              <DialogDescription className="text-base text-foreground/80">
-                {project.projectContext}
-              </DialogDescription>
+              <h4 className="font-semibold text-foreground mb-2">{t('projectModal.keywords')}</h4>
+              <div className="flex flex-wrap gap-2">
+                {project.keywords.split(',').map((keyword, i) => (
+                  <Badge key={i} variant="secondary">{keyword.trim()}</Badge>
+                ))}
+              </div>
             </div>
-            <div>
-              <h4 className="font-semibold text-foreground">{t('projectModal.keywords')}</h4>
-              <p className="text-foreground/80">{project.keywords}</p>
-            </div>
+          </div>
+          
+          <div className="flex flex-wrap gap-3 pt-4 border-t border-border/50">
+             <Button asChild>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  {t('portfolio.liveDemo')} <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a href={project.github} target="_blank" rel="noopener noreferrer">
+                  <Github className="mr-2 h-4 w-4" /> GitHub
+                </a>
+              </Button>
+              <Button variant="outline" onClick={() => onImproveDescription(project)}>
+                Improve with AI <Sparkles className="ml-2 h-4 w-4 text-accent" />
+              </Button>
           </div>
         </div>
       </DialogContent>
     </Dialog>
   );
 }
+
