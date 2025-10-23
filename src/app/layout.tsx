@@ -7,6 +7,10 @@ import { LanguageProvider } from '@/lib/i18n';
 export const metadata: Metadata = {
   title: 'Ryan Hanafi',
   description: 'A modern web3-style portfolio.',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+  },
 };
 
 export default function RootLayout({
