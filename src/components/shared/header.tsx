@@ -34,7 +34,7 @@ const Header = () => {
       <div className="container flex h-14 items-center">
         <a href="#" className="mr-6 flex items-center space-x-2">
           <Code className="h-6 w-6 text-accent" />
-          <span className="font-bold font-headline">Digital Canvas</span>
+          <span className="font-bold font-headline">Ryan Hanafi</span>
         </a>
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
           {navLinks.map(({ href, label }) => (
@@ -73,7 +73,7 @@ const Header = () => {
                 <div className="flex flex-col space-y-4 p-4">
                   <a href="#" className="mr-6 flex items-center space-x-2 mb-4">
                       <Code className="h-6 w-6 text-accent" />
-                      <span className="font-bold font-headline">Digital Canvas</span>
+                      <span className="font-bold font-headline">Ryan Hanafi</span>
                   </a>
                   {navLinks.map(({ href, label }) => (
                     <a key={label} href={href} onClick={(e) => handleLinkClick(e, href)} className="text-lg font-medium text-foreground transition-colors hover:text-accent">

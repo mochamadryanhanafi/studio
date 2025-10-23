@@ -5,7 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider';
 import { LanguageProvider } from '@/lib/i18n';
 
 export const metadata: Metadata = {
-  title: 'Digital Canvas',
+  title: 'Ryan Hanafi',
   description: 'A modern web3-style portfolio.',
 };
 

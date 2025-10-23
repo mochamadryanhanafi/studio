@@ -11,11 +11,11 @@ const Footer = () => {
         <div className="flex items-center gap-2">
            <a href="#" className="flex items-center space-x-2">
               <Code className="h-6 w-6 text-accent" />
-              <span className="font-bold font-headline text-lg">Digital Canvas</span>
+              <span className="font-bold font-headline text-lg">Ryan Hanafi</span>
             </a>
         </div>
          <p className="text-center text-sm text-muted-foreground md:text-left">
-            © {new Date().getFullYear()} Digital Canvas. {t('footer.rights')}.
+            © {new Date().getFullYear()} Ryan Hanafi. {t('footer.rights')}.
           </p>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
