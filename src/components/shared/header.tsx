@@ -1,5 +1,5 @@
 "use client";
-import { Code, Menu, Languages } from 'lucide-react';
+import { Cloud, Menu, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
@@ -33,7 +33,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <a href="#" className="mr-6 flex items-center space-x-2">
-          <Code className="h-6 w-6 text-accent" />
+          <Cloud className="h-6 w-6 text-accent" />
           <span className="font-bold font-headline">Ryan Hanafi</span>
         </a>
         <nav className="hidden flex-1 items-center space-x-6 text-sm font-medium md:flex">
@@ -72,7 +72,7 @@ const Header = () => {
               <SheetContent side="right">
                 <div className="flex flex-col space-y-4 p-4">
                   <a href="#" className="mr-6 flex items-center space-x-2 mb-4">
-                      <Code className="h-6 w-6 text-accent" />
+                      <Cloud className="h-6 w-6 text-accent" />
                       <span className="font-bold font-headline">Ryan Hanafi</span>
                   </a>
                   {navLinks.map(({ href, label }) => (
