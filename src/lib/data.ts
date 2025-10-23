@@ -189,6 +189,15 @@ export const certificates: Certificate[] = [
     imageHint: "Google Cloud certificate",
     link: "https://www.credly.com/badges/e913f8ae-5fc2-46d8-837d-dbe9e55a0778/linked_in_profile",
   },
+  {
+    id: 6,
+    title: "AWS Educate Introduction to Generative AI - Training Badge",
+    issuer: "AWS Educate",
+    year: "2025",
+    imageUrl: "https://images.credly.com/size/340x340/images/e50c657a-edd9-4c93-b1cf-2b6634b54abf/blob",
+    imageHint: "Generative AI badge",
+    link: "https://www.credly.com/badges/eaa894c2-32b2-40b7-b420-2fa635d80880/linked_in_profile",
+  },
 ];
 
 export const skills: Skill[] = [
