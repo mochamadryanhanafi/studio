@@ -146,12 +146,12 @@ export const projects: Project[] = [
 export const certificates: Certificate[] = [
   {
     id: 1,
-    title: "Certified Kubernetes Administrator",
-    issuer: "Cloud Native Computing Foundation",
-    year: "2023",
-    imageUrl: placeholderImages[10].imageUrl,
-    imageHint: placeholderImages[10].imageHint,
-    link: "#",
+    title: "AWS Re/Start Graduate",
+    issuer: "AWS and PT Orbit Future Academy",
+    year: "2025",
+    imageUrl: "https://images.credly.com/size/340x340/images/44e2c252-5d19-4574-9646-005f7225bf53/image.png",
+    imageHint: "aws badge",
+    link: "https://www.credly.com/badges/cbc907d2-9c58-43cd-92ce-19d55f4ea5ef/linked_in_profile",
   },
   {
     id: 2,
@@ -237,6 +237,7 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 
 
 
