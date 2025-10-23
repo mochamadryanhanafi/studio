@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useForm, type SubmitHandler } from 'react-hook-form';
@@ -7,8 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { useToast } from '@/hooks/use-toast';
-import { submitContactForm } from '@/app/actions';
 import { Send } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 import Contact3D from '../interactive/contact-3d';
@@ -22,7 +21,6 @@ const formSchema = z.object({
 type ContactFormValues = z.infer<typeof formSchema>;
 
 const ContactSection = () => {
-  const { toast } = useToast();
   const { t } = useTranslation();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(formSchema),
@@ -33,23 +31,12 @@ const ContactSection = () => {
     },
   });
 
-  const { formState: { isSubmitting } } = form;
-
-  const onSubmit: SubmitHandler<ContactFormValues> = async (data) => {
-    const result = await submitContactForm(data);
-    if (result.success) {
-      toast({
-        title: t('contact.toast.success.title'),
-        description: result.message,
-      });
-      form.reset();
-    } else {
-      toast({
-        variant: 'destructive',
-        title: t('contact.toast.error.title'),
-        description: result.message,
-      });
-    }
+  const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
+    const subject = `New message from ${data.name}`;
+    const body = `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
+    const mailtoLink = `mailto:mochamadryanhanafi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+    form.reset();
   };
 
   return (
@@ -107,8 +94,8 @@ const ContactSection = () => {
                 )}
               />
               <div className="text-center">
-                <Button type="submit" size="lg" disabled={isSubmitting}>
-                  {isSubmitting ? t('contact.form.button.sending') : t('contact.form.button.send')}
+                <Button type="submit" size="lg">
+                  {t('contact.form.button.send')}
                   <Send className="ml-2 h-4 w-4" />
                 </Button>
               </div>
