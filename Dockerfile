@@ -1,44 +1,47 @@
+# Dockerfile
+
 # Tahap 1: Builder
+# Menggunakan image Node.js versi 18 sebagai dasar
 FROM node:18-alpine AS builder
 
-# Mengatur direktori kerja
+# Mengatur direktori kerja di dalam container
 WORKDIR /app
 
-# Menyalin package.json dan package-lock.json (atau yarn.lock)
+# Menyalin package.json dan package-lock.json
 COPY package*.json ./
 
 # Menginstal dependensi
 RUN npm install
 
-# Menyalin sisa file aplikasi
+# Menyalin seluruh kode aplikasi
 COPY . .
 
-# Membangun aplikasi
+# Membangun aplikasi Next.js
 RUN npm run build
 
 # Tahap 2: Runner
+# Menggunakan image Node.js versi 18 yang lebih ringan
 FROM node:18-alpine AS runner
 
 WORKDIR /app
 
-# Menambahkan pengguna non-root untuk keamanan
+# Membuat user dan grup non-root untuk keamanan
 RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nextjs -u 1001
 
-# Mengatur variabel lingkungan
+# Mengatur environment variable untuk produksi
 ENV NODE_ENV=production
 
 # Menyalin output build standalone
-# Direktori public mungkin tidak ada jika tidak ada aset statis, jadi kita buat opsional
-COPY --from=builder /app/public* ./public/
+COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Mengatur pengguna
+# Mengubah kepemilikan direktori ke user non-root
 USER nextjs
 
-# Mengekspos port
+# Mengekspos port yang digunakan oleh Next.js
 EXPOSE 3000
 
-# Perintah untuk menjalankan aplikasi
+# Menentukan perintah untuk menjalankan aplikasi
 CMD ["node", "server.js"]
