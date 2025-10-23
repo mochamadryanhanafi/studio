@@ -12,7 +12,7 @@ const ProfileCalloutSection = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10">
                          <Image
-                            src="https://picsum.photos/seed/avatar/200/200"
+                            src="https://media.licdn.com/dms/image/v2/D5603AQEA5kh_DaMNJA/profile-displayphoto-crop_800_800/B56ZlGHjtvG4AI-/0/1757818012487?e=1762992000&v=beta&t=eSYIlpAvpcQsRSzKIMBajs1-EOVOXezOuneUVwM-PWQ"
                             alt="Profile Picture"
                             width={200}
                             height={200}

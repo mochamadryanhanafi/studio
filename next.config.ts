@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: 'images.credly.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'media.licdn.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
