@@ -171,6 +171,15 @@ export const certificates: Certificate[] = [
     imageHint: "Fullstack Developer certificate",
     link: "https://winnicode.com/sertifikat/WINNI-MG-2024-06650FBE",
   },
+  {
+    id: 4,
+    title: "Implementation of Machine Learning on Google Cloud",
+    issuer: "Dicoding Indonesia",
+    year: "2024",
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/penerapan-machine-learning-cloud_grhwu6.png",
+    imageHint: "Machine Learning Certificate",
+    link: "https://www.dicoding.com/certificates/KEXLYDR04ZG2",
+  },
 ];
 
 export const skills: Skill[] = [
@@ -246,6 +255,7 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 
 
 
