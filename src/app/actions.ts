@@ -1,6 +1,5 @@
 "use server";
 
-import { improveDescription as improveDescriptionFlow, type ImproveDescriptionInput } from '@/ai/flows/improve-portfolio-descriptions';
 import { z } from 'zod';
 
 // Contact Form Action
@@ -21,17 +20,5 @@ export async function submitContactForm(data: unknown) {
     const errorMessages = parsed.error.issues.map(issue => issue.message).join(' ');
     console.error('Form validation error:', errorMessages);
     return { success: false, message: `Invalid data: ${errorMessages}` };
-  }
-}
-
-// AI Description Improvement Action
-export async function improveDescriptionAction(input: ImproveDescriptionInput) {
-  try {
-    const result = await improveDescriptionFlow(input);
-    return { success: true, data: result };
-  } catch (error) {
-    console.error('AI error:', error);
-    const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred.';
-    return { success: false, message: `Failed to generate suggestion: ${errorMessage}` };
   }
 }

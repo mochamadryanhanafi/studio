@@ -1,25 +1,22 @@
 
 "use client";
 
-import { useState } from 'react';
 import type { Project } from '@/lib/data';
 import Image from 'next/image';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github, Sparkles } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
-import ImproveDescriptionModal from '../ai/improve-description-modal';
 
 interface ProjectDetailModalProps {
   project: Project | null;
   isOpen: boolean;
   onOpenChange: (isOpen: boolean) => void;
-  onImproveDescription: (project: Project) => void;
 }
 
-export default function ProjectDetailModal({ project, isOpen, onOpenChange, onImproveDescription }: ProjectDetailModalProps) {
+export default function ProjectDetailModal({ project, isOpen, onOpenChange }: ProjectDetailModalProps) {
   const { t } = useTranslation();
   
   if (!project) return null;
@@ -84,13 +81,9 @@ export default function ProjectDetailModal({ project, isOpen, onOpenChange, onIm
                   <Github className="mr-2 h-4 w-4" /> GitHub
                 </a>
               </Button>
-              <Button variant="outline" onClick={() => onImproveDescription(project)}>
-                Improve with AI <Sparkles className="ml-2 h-4 w-4 text-accent" />
-              </Button>
           </div>
         </div>
       </DialogContent>
     </Dialog>
   );
 }
-

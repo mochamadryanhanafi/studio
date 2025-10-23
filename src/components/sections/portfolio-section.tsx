@@ -6,24 +6,17 @@ import { projects, type Project } from '@/lib/data';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, ChevronDown, ChevronUp, Sparkles } from 'lucide-react';
+import { ExternalLink, Github, ChevronDown, ChevronUp } from 'lucide-react';
 import ProjectDetailModal from './project-detail-modal';
 import { useTranslation } from '@/lib/i18n';
 import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
-import ImproveDescriptionModal from '../ai/improve-description-modal';
 
 const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [projectToImprove, setProjectToImprove] = useState<Project | null>(null);
   const [showAll, setShowAll] = useState(false);
   const { t } = useTranslation();
 
   const projectsToShow = showAll ? projects : projects.slice(0, 4);
-
-  const handleImproveClick = (e: React.MouseEvent, project: Project) => {
-    e.stopPropagation();
-    setProjectToImprove(project);
-  };
 
   return (
     <>
@@ -56,13 +49,6 @@ const PortfolioSection = () => {
                             data-ai-hint={project.imageHint}
                         />
                     </div>
-                    <Button 
-                      size="sm" 
-                      className="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      onClick={(e) => handleImproveClick(e, project)}
-                    >
-                      Improve <Sparkles className="ml-2 h-4 w-4" />
-                    </Button>
                   </div>
                   <CardHeader>
                     <CardTitle className="font-headline text-2xl">{project.title}</CardTitle>
@@ -101,19 +87,9 @@ const PortfolioSection = () => {
         project={selectedProject} 
         isOpen={!!selectedProject} 
         onOpenChange={(isOpen) => !isOpen && setSelectedProject(null)}
-        onImproveDescription={(project) => {
-          setSelectedProject(null);
-          setProjectToImprove(project);
-        }}
-      />
-      <ImproveDescriptionModal
-        project={projectToImprove}
-        isOpen={!!projectToImprove}
-        onOpenChange={(isOpen) => !isOpen && setProjectToImprove(null)}
       />
     </>
   );
 };
 
 export default PortfolioSection;
-
