@@ -4,10 +4,11 @@ import { useState } from 'react';
 import { certificates, type Certificate } from '@/lib/data';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award } from 'lucide-react';
+import { Award, ExternalLink } from 'lucide-react';
 import CertificateDetailModal from './certificate-detail-modal';
 import { useTranslation } from '@/lib/i18n';
 import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
+import { Button } from '../ui/button';
 
 const CertificatesSection = () => {
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
@@ -47,6 +48,13 @@ const CertificatesSection = () => {
                   </div>
                 </Card>
               ))}
+            </div>
+            <div className="mt-8 text-center">
+                <Button asChild variant="link" className="text-lg">
+                    <a href="https://www.linkedin.com/in/mochamad-ryan-hanafi/details/certifications/" target="_blank" rel="noopener noreferrer">
+                        and More (LinkedIn) <ExternalLink className="ml-2 h-4 w-4" />
+                    </a>
+                </Button>
             </div>
         </div>
       </section>
