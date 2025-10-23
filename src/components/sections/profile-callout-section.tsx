@@ -23,8 +23,8 @@ const ProfileCalloutSection = () => {
                 </div>
             </div>
             <div className='mt-4'>
-                <h3 className="font-headline text-2xl font-bold text-foreground">Jane Doe</h3>
-                <p className="text-lg text-foreground/80">Full-Stack Web3 Developer</p>
+                <h3 className="font-headline text-2xl font-bold text-foreground">Mochamad Ryan Hanafi</h3>
+                <p className="text-lg text-foreground/80">Fullstack Developer | Cloud Computing | Machine Learning</p>
             </div>
         </div>
     </section>
