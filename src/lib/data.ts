@@ -36,6 +36,14 @@ export type Skill = {
   icon?: React.ComponentType<{ className?: string }>;
 }
 
+export type TimelineItem = {
+    title: string;
+    company: string;
+    date: string;
+    description: string;
+    type: 'work' | 'education';
+}
+
 export const projects: Project[] = [
   {
     id: 1,
@@ -126,3 +134,37 @@ export const skills: Skill[] = [
 ];
 
 export const galleryImages: GalleryImage[] = placeholderImages.slice(12);
+
+export const workExperience: TimelineItem[] = [
+    {
+        title: "Backend Engineer",
+        company: "Tech Solutions Inc.",
+        date: "Jan 2021 - Present",
+        description: "Designing and implementing scalable backend services for web applications. Working with microservices architecture and cloud-native technologies.",
+        type: 'work'
+    },
+    {
+        title: "Junior Developer",
+        company: "Innovate Co.",
+        date: "Jun 2019 - Dec 2020",
+        description: "Assisted in the development of new features, bug fixing, and maintaining the existing codebase for several client projects.",
+        type: 'work'
+    }
+];
+
+export const education: TimelineItem[] = [
+    {
+        title: "Bachelor of Science in Computer Science",
+        company: "University of Technology",
+        date: "2015 - 2019",
+        description: "Focused on software engineering, algorithms, and artificial intelligence. Graduated with honors.",
+        type: 'education'
+    },
+    {
+        title: "High School Diploma",
+        company: "Science High School",
+        date: "2012 - 2015",
+        description: "Specialized in mathematics and physics, laying a strong foundation for a career in technology.",
+        type: 'education'
+    }
+]

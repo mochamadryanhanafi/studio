@@ -2,6 +2,7 @@ import Header from '@/components/shared/header';
 import Footer from '@/components/shared/footer';
 import HeroSection from '@/components/sections/hero-section';
 import AboutSection from '@/components/sections/about-section';
+import TimelineSection from '@/components/sections/timeline-section';
 import PortfolioSection from '@/components/sections/portfolio-section';
 import ContactSection from '@/components/sections/contact-section';
 import CertificatesSection from '@/components/sections/certificates-section';
@@ -18,6 +19,7 @@ export default function Home() {
         <HeroSection />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <AboutSection />
+          <TimelineSection />
           <PortfolioSection />
           <CertificatesSection />
           <ProfileCalloutSection />

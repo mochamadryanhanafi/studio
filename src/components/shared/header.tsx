@@ -18,6 +18,7 @@ const Header = () => {
 
   const navLinks = [
     { href: '#about', label: t('header.about') },
+    { href: '#timeline', label: t('header.timeline') },
     { href: '#portfolio', label: t('header.portfolio') },
     { href: '#certificates', label: t('header.certificates') },
     { href: '#contact', label: t('header.contact') },
