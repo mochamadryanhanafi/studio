@@ -53,7 +53,7 @@ export const projects: Project[] = [
     imageHint: "dashboard project",
     detailImageUrls: ["https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa2_dnkjft.jpg", "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186474/cleaneat_kha02e.png"],
     projectContext: "This system is designed to detect and monitor dirty tables in real time using CCTV cameras and machine learning. By leveraging a cloud-based infrastructure, it processes image data to identify unclean tables and displays the results on a web dashboard for efficient supervision. The solution integrates object detection models, Flask API, and cloud computing services to provide scalable, automated, and data-driven monitoring, improving cleanliness management and operational efficiency in environments such as canteens, restaurants, and public dining areas.",
-    keywords: "web3, blockchain, decentralized, react, nextjs",
+    keywords: "Flask, Python, firestore, Goodle Coud Platform",
     link: "#",
     github: "#",
   },
@@ -237,6 +237,7 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 
 
 
