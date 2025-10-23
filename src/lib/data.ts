@@ -49,9 +49,9 @@ export const projects: Project[] = [
     id: 1,
     title: "Project Alpha",
     description: "A futuristic web platform for decentralized applications.",
-    imageUrl: placeholderImages[0].imageUrl,
-    imageHint: placeholderImages[0].imageHint,
-    detailImageUrls: [placeholderImages[4].imageUrl, placeholderImages[5].imageUrl],
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186474/cleaneat_kha02e.png",
+    imageHint: "web application",
+    detailImageUrls: ["https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa2_dnkjft.jpg", "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa1_qwcszz.jpg"],
     projectContext: "Project Alpha is a cutting-edge platform built with Next.js and Solidity, aimed at revolutionizing dApp interactions.",
     keywords: "web3, blockchain, decentralized, react, nextjs",
     link: "#",
@@ -61,8 +61,8 @@ export const projects: Project[] = [
     id: 2,
     title: "Project Beta",
     description: "A sleek mobile application for seamless asset management.",
-    imageUrl: placeholderImages[1].imageUrl,
-    imageHint: placeholderImages[1].imageHint,
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa2_dnkjft.jpg",
+    imageHint: "mobile app",
     detailImageUrls: [placeholderImages[6].imageUrl],
     projectContext: "Project Beta is a native mobile app for iOS and Android that allows users to track and manage their digital assets in real-time.",
     keywords: "mobile, finance, asset management, react native",
@@ -73,8 +73,8 @@ export const projects: Project[] = [
     id: 3,
     title: "Project Gamma",
     description: "An interactive data visualization dashboard for market trends.",
-    imageUrl: placeholderImages[2].imageUrl,
-    imageHint: placeholderImages[2].imageHint,
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa1_qwcszz.jpg",
+    imageHint: "dashboard project",
     detailImageUrls: [placeholderImages[7].imageUrl, placeholderImages[8].imageUrl],
     projectContext: "Project Gamma uses D3.js and React to create dynamic and interactive charts that help users understand complex market data.",
     keywords: "data, visualization, d3, react, dashboard",
@@ -237,5 +237,6 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 
 
