@@ -162,6 +162,15 @@ export const certificates: Certificate[] = [
     imageHint: "Bangkit certificate",
     link: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186475/sertifbangkit_w9fwrz.png",
   },
+  {
+    id: 3,
+    title: "Fullstack Developer",
+    issuer: "PT Winnicode Garuda Teknologi",
+    year: "2024",
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761201795/Sertif-Winnicode_cqrwcx.png",
+    imageHint: "Fullstack Developer certificate",
+    link: "https://winnicode.com/sertifikat/WINNI-MG-2024-06650FBE",
+  },
 ];
 
 export const skills: Skill[] = [
@@ -237,6 +246,7 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 
 
 
