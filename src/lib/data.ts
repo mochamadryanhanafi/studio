@@ -155,12 +155,12 @@ export const certificates: Certificate[] = [
   },
   {
     id: 2,
-    title: "Google Professional Cloud Architect",
-    issuer: "Google Cloud",
+    title: "Bangkit Cloud Computing Cohort",
+    issuer: "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
     year: "2022",
-    imageUrl: placeholderImages[11].imageUrl,
-    imageHint: placeholderImages[11].imageHint,
-    link: "#",
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186475/sertifbangkit_w9fwrz.png",
+    imageHint: "Bangkit certificate",
+    link: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186475/sertifbangkit_w9fwrz.png",
   },
 ];
 
@@ -237,6 +237,7 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 
 
 
