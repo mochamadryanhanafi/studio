@@ -144,10 +144,10 @@ export const workExperience: TimelineItem[] = [
         type: 'work'
     },
     {
-        title: "Junior Developer",
-        company: "Innovate Co.",
-        date: "Jun 2019 - Dec 2020",
-        description: "Assisted in the development of new features, bug fixing, and maintaining the existing codebase for several client projects.",
+        title: "Backend Developer",
+        company: "PT KITA BANTU Indonesia",
+        date: "Mei – Juli 2025",
+        description: "Developed mobile application APIs using Laravel. Implemented Clean Architecture principles to build structured, maintainable, and scalable API services. Integrated a message broker (RabbitMQ) to enable efficient data communication across platforms. Collaborated with web and mobile teams to develop and enhance backend features for the payment system.",
         type: 'work'
     }
 ];
