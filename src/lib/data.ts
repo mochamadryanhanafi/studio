@@ -149,6 +149,13 @@ export const workExperience: TimelineItem[] = [
         date: "Mei – Juli 2025",
         description: "Developed mobile application APIs using Laravel. Implemented Clean Architecture principles to build structured, maintainable, and scalable API services. Integrated a message broker (RabbitMQ) to enable efficient data communication across platforms. Collaborated with web and mobile teams to develop and enhance backend features for the payment system.",
         type: 'work'
+    },
+    {
+        title: "Fullstack Developer",
+        company: "PT Winnicode Garuda Teknologi",
+        date: "Januari– Juni 2025",
+        description: "Built a news portal application using the MERN stack (MongoDB, Express.js, React.js, Node.js). Developed a secure backend by implementing safeguards against common web attacks such as XSS filtering, CORS policies, and rate limiting. Integrated Redis and session cookies to enhance page loading speed and overall application performance. Designed and implemented a user-friendly frontend interface with a unique layout that distinguishes it from traditional news portals. Deployed the news portal application using Google Cloud Run on the Google Cloud Platform (GCP).",
+        type: 'work'
     }
 ];
 
