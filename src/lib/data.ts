@@ -1,3 +1,4 @@
+
 import { placeholderImages } from './placeholder-images.json';
 import EthersJSIcon from '@/components/icons/ethers-js-icon';
 import { Code, Server, Database, GitBranch, PenTool, Wind, Layers, Settings, Puzzle, Cpu, Cloud, Terminal } from 'lucide-react';
@@ -217,7 +218,7 @@ export const skills: Skill[] = [
   { name: "TensorFlow", icon: Cpu },
 ];
 
-export const galleryImages: GalleryImage[] = placeholderImages.slice(12, 17);
+export const galleryImages: GalleryImage[] = placeholderImages.slice(25, 28);
 
 export const workExperience: TimelineItem[] = [
     {
@@ -284,5 +285,7 @@ export const education: TimelineItem[] = [
 
 
 
+
+    
 
     

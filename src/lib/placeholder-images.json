@@ -66,7 +66,7 @@
     },
     {
       "id": "gallery-1",
-      "imageUrl": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzYxMDU2OTM0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1579548122080-c35fd6820ecb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhYnN0cmFjdCUyMHRlY2hub2xvZ3l8ZW58MHx8fHwxNzYxMDU2OTM0fDA&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "abstract technology"
     },
     {
@@ -86,7 +86,7 @@
     },
     {
       "id": "gallery-5",
-      "imageUrl": "https://images.unsplash.com/photo-1641984790242-d8aa477d306c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwYXJ0fGVufDB8fHx8MTc2MDk2OTA0Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1641984790242-d8aa477d306c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwYXJ0fGVufDB8fHx8MTc2MDk2OTA0Mnww&ixlib-rb-4.1.0&q=80&w=1080",
       "imageHint": "digital art"
     },
     {
@@ -128,6 +128,21 @@
       "id": "detail-theta-1",
       "imageUrl": "https://images.unsplash.com/photo-1448471237638-f8ccc7d5ac9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxkaWdpdGFsJTIwZHJhd2luZ3xlbnwwfHx8fDE3NjExOTU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "digital drawing"
+    },
+    {
+      "id": "new-gallery-1",
+      "imageUrl": "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186473/buhar1_gpcmxx.jpg",
+      "imageHint": "abstract design"
+    },
+    {
+      "id": "new-gallery-2",
+      "imageUrl": "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa1_qwcszz.jpg",
+      "imageHint": "dashboard project"
+    },
+    {
+      "id": "new-gallery-3",
+      "imageUrl": "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa2_dnkjft.jpg",
+      "imageHint": "mobile app"
     }
   ]
 }
