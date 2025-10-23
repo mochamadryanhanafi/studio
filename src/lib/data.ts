@@ -175,10 +175,10 @@ export const education: TimelineItem[] = [
         type: 'education'
     },
     {
-        title: "High School Diploma",
-        company: "Science High School",
-        date: "2012 - 2015",
-        description: "Specialized in mathematics and physics, laying a strong foundation for a career in technology.",
+        title: "AWS re/Start – Cloud Computing Fundamentals",
+        company: "PT Orbit Future Academy",
+        date: "Agustus – Oktober 2025",
+        description: "Program AWS re/Start yang diselenggarakan oleh PT Orbit Future Academy merupakan pelatihan intensif selama tiga bulan untuk membangun kompetensi di bidang Cloud Computing dan Operasi TI. Peserta dibekali keterampilan dasar hingga lanjutan meliputi Linux, jaringan, keamanan, Python, basis data, serta layanan inti AWS seperti EC2, S3, CloudWatch, dan Auto Scaling. Program ini juga mengembangkan soft skill profesional guna mempersiapkan peserta menjadi talenta siap kerja di industri cloud dan teknologi informasi.",
         type: 'education'
     }
 ]
