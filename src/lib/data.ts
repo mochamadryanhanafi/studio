@@ -168,10 +168,10 @@ export const workExperience: TimelineItem[] = [
 
 export const education: TimelineItem[] = [
     {
-        title: "Bachelor of Science in Computer Science",
-        company: "University of Technology",
-        date: "2015 - 2019",
-        description: "Focused on software engineering, algorithms, and artificial intelligence. Graduated with honors.",
+        title: "Informatics Engineering",
+        company: "Politeknik Negeri Jember",
+        date: "2022- Currently",
+        description: "GPA 3.90/4.00 ● I succeeded in making various projects during college, namely Cleaneat, SiDebuh, and Improman",
         type: 'education'
     },
     {
