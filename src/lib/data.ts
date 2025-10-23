@@ -117,6 +117,12 @@ export const skills: Skill[] = [
   { name: "REST API", icon: GitBranch },
   { name: "Python", icon: Code },
   { name: "Linux", icon: Terminal },
+  { name: "Laravel", icon: Code },
+  { name: "Docker", icon: Layers },
+  { name: "MySQL", icon: Database },
+  { name: "PostgreSQL", icon: Database },
+  { name: "MongoDB", icon: Database },
+  { name: "TensorFlow", icon: Cpu },
 ];
 
 export const galleryImages: GalleryImage[] = placeholderImages.slice(12);
