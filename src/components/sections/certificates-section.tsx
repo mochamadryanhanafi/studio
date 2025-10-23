@@ -7,7 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Award } from 'lucide-react';
 import CertificateDetailModal from './certificate-detail-modal';
 import { useTranslation } from '@/lib/i18n';
-import BirdParticleAnimation from '../interactive/bird-particle-animation';
+import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
 
 const CertificatesSection = () => {
   const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null);
@@ -16,7 +16,7 @@ const CertificatesSection = () => {
   return (
     <>
       <section id="certificates" className="py-24 sm:py-32 relative">
-        <BirdParticleAnimation />
+        <PaperAirplaneAnimation />
         <div className="relative z-10">
             <div className="mx-auto max-w-2xl text-center animate-in fade-in duration-700 ease-out">
               <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

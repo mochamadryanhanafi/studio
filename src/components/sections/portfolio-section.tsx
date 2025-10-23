@@ -8,7 +8,7 @@ import { Button } from '@/components/ui/button';
 import { ExternalLink, Github } from 'lucide-react';
 import ProjectDetailModal from './project-detail-modal';
 import { useTranslation } from '@/lib/i18n';
-import BirdParticleAnimation from '../interactive/bird-particle-animation';
+import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
 
 const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -17,7 +17,7 @@ const PortfolioSection = () => {
   return (
     <>
       <section id="portfolio" className="py-24 sm:py-32 relative">
-        <BirdParticleAnimation />
+        <PaperAirplaneAnimation />
         <div className="relative z-10">
             <div className="mx-auto max-w-2xl text-center animate-in fade-in duration-700 ease-out">
               <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
