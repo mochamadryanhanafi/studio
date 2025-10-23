@@ -180,6 +180,15 @@ export const certificates: Certificate[] = [
     imageHint: "Machine Learning Certificate",
     link: "https://www.dicoding.com/certificates/KEXLYDR04ZG2",
   },
+  {
+    id: 5,
+    title: "Google Cloud Computing Foundations Certificate",
+    issuer: "Google",
+    year: "2024",
+    imageUrl: "https://images.credly.com/size/340x340/images/4dda8ae4-99ee-476c-bca3-6f0adbab42fe/image.png",
+    imageHint: "Google Cloud certificate",
+    link: "https://www.credly.com/badges/e913f8ae-5fc2-46d8-837d-dbe9e55a0778/linked_in_profile",
+  },
 ];
 
 export const skills: Skill[] = [
@@ -265,3 +274,6 @@ export const education: TimelineItem[] = [
 
 
 
+
+
+    
