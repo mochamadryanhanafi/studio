@@ -1,5 +1,5 @@
 "use client";
-import { Github, Twitter, Linkedin, Cloud } from 'lucide-react';
+import { Github, Phone, Linkedin, Cloud } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/lib/i18n';
 
@@ -19,17 +19,17 @@ const Footer = () => {
           </p>
         <div className="flex items-center gap-2">
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/mochamadryanhanafi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
+            <a href="https://wa.me/6285860516408" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <Phone className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/mochamad-ryan-hanafi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-5 w-5 text-muted-foreground hover:text-foreground transition-colors" />
             </a>
           </Button>
