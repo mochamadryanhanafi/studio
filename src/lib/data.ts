@@ -1,6 +1,6 @@
 import { placeholderImages } from './placeholder-images.json';
 import EthersJSIcon from '@/components/icons/ethers-js-icon';
-import { Code, Server, Database, GitBranch, PenTool, Wind, Layers, Settings, Puzzle, Cpu } from 'lucide-react';
+import { Code, Server, Database, GitBranch, PenTool, Wind, Layers, Settings, Puzzle, Cpu, Cloud, Terminal } from 'lucide-react';
 
 export type Project = {
   id: number;
@@ -109,18 +109,14 @@ export const certificates: Certificate[] = [
 ];
 
 export const skills: Skill[] = [
-  { name: "React", icon: Code },
-  { name: "Next.js", icon: Code },
-  { name: "TypeScript", icon: Code },
-  { name: "Node.js", icon: Server },
-  { name: "GraphQL", icon: GitBranch },
-  { name: "Solidity", icon: Cpu },
-  { name: "PostgreSQL", icon: Database },
-  { name: "Docker", icon: Layers },
-  { name: "Figma", icon: PenTool },
-  { name: "UI/UX Design", icon: Puzzle },
-  { name: "Web3", icon: Wind },
-  { name: "Ethers.js", icon: EthersJSIcon },
+  { name: "Express JS", icon: Server },
+  { name: "Golang", icon: Code },
+  { name: "AWS", icon: Cloud },
+  { name: "GCP", icon: Cloud },
+  { name: "Next JS", icon: Code },
+  { name: "REST API", icon: GitBranch },
+  { name: "Python", icon: Code },
+  { name: "Linux", icon: Terminal },
 ];
 
 export const galleryImages: GalleryImage[] = placeholderImages.slice(12);
