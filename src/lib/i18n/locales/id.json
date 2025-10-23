@@ -14,8 +14,8 @@
   },
   "about": {
     "title": "Tentang Saya",
-    "paragraph1": "Saya seorang pengembang dan desainer yang bersemangat dengan perhatian tajam untuk menciptakan pengalaman digital yang indah, fungsional, dan berpusat pada pengguna. Dengan latar belakang di bidang seni dan ilmu komputer, saya senang menjembatani kesenjangan antara estetika dan teknologi.",
-    "paragraph2": "Perjalanan saya ke dunia web3 didorong oleh ketertarikan pada sistem terdesentralisasi dan potensi yang mereka miliki untuk masa depan digital yang lebih adil. Saya berspesialisasi dalam membangun aplikasi web dan dApps yang responsif dan berkinerja tinggi dari awal.",
+    "paragraph1": "Saya Mochamad Ryan Hanafi, seorang Backend Engineer dengan keahlian kuat dalam Cloud Computing, berdedikasi untuk membangun sistem yang efisien, aman, dan dapat diskalakan menggunakan Express.js, Laravel, dan Golang. Saya memiliki pengalaman langsung dalam mengelola Redis, RabbitMQ, MySQL, dan MongoDB untuk memastikan kinerja backend yang tinggi, serta menerapkan dan mengelola infrastruktur modern di Google Cloud Platform (GCP).",
+    "paragraph2": "Selain itu, saya memiliki keterampilan dalam Machine Learning, termasuk pengumpulan data, desain model, pelatihan, dan penerapan model yang akurat dan terintegrasi dengan cloud. Menggabungkan keahlian teknis dengan semangat untuk inovasi, saya berkomitmen untuk memberikan solusi teknologi yang andal, adaptif, dan berkinerja tinggi yang mendorong efisiensi dan skalabilitas.",
     "skillset": "Keahlian Saya"
   },
   "portfolio": {

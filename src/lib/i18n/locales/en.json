@@ -14,8 +14,8 @@
   },
   "about": {
     "title": "About Me",
-    "paragraph1": "I am a passionate developer and designer with a keen eye for creating beautiful, functional, and user-centric digital experiences. With a background in both art and computer science, I thrive on bridging the gap between aesthetics and technology.",
-    "paragraph2": "My journey into the world of web3 has been driven by a fascination with decentralized systems and the potential they hold for a more equitable digital future. I specialize in building responsive, high-performance web applications and dApps from the ground up.",
+    "paragraph1": "I’m Mochamad Ryan Hanafi, a Backend Engineer with strong expertise in Cloud Computing, dedicated to building efficient, secure, and scalable systems using Express.js, Laravel, and Golang. I have hands-on experience managing Redis, RabbitMQ, MySQL, and MongoDB to ensure high backend performance, as well as deploying and managing modern infrastructure on Google Cloud Platform (GCP).",
+    "paragraph2": "In addition, I possess skills in Machine Learning, including data collection, model design, training, and deployment of accurate and cloud-integrated models. Combining technical expertise with a passion for innovation, I am committed to delivering reliable, adaptive, and high-performance technology solutions that drive efficiency and scalability.",
     "skillset": "My Skillset"
   },
   "portfolio": {
