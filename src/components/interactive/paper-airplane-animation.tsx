@@ -60,6 +60,8 @@ const PaperAirplaneAnimation = () => {
         side: THREE.DoubleSide,
         roughness: 0.6,
         metalness: 0.2,
+        emissive: 0x9400D3,
+        emissiveIntensity: 0.5,
     });
     
     const instancedMesh = new THREE.InstancedMesh(airplaneGeometry, airplaneMaterial, airplaneCount);
