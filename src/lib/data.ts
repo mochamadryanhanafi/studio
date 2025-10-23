@@ -137,10 +137,10 @@ export const galleryImages: GalleryImage[] = placeholderImages.slice(12);
 
 export const workExperience: TimelineItem[] = [
     {
-        title: "Backend Engineer",
-        company: "Tech Solutions Inc.",
-        date: "Jan 2021 - Present",
-        description: "Designing and implementing scalable backend services for web applications. Working with microservices architecture and cloud-native technologies.",
+        title: "Management Information System Intern",
+        company: "PT YAMAHA MUSICAL PRODUCTS INDONESIA",
+        date: "Agustus – Present",
+        description: "Developed an object detection model to monitor missing items such as stationery, utilizing over 1,800 datasets and more than 100,000 labels. Built a web application using Laravel with an efficient and easily manageable MySQL database. Added 8 new features within two months to enhance the efficiency of the company’s internal systems. Collaborated across multiple divisions to understand operational needs and implement effective solutions for manufacturing processes.",
         type: 'work'
     },
     {
