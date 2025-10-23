@@ -5,14 +5,17 @@ import { projects, type Project } from '@/lib/data';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, ChevronDown, ChevronUp } from 'lucide-react';
 import ProjectDetailModal from './project-detail-modal';
 import { useTranslation } from '@/lib/i18n';
 import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
 
 const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [showAll, setShowAll] = useState(false);
   const { t } = useTranslation();
+
+  const projectsToShow = showAll ? projects : projects.slice(0, 4);
 
   return (
     <>
@@ -28,7 +31,7 @@ const PortfolioSection = () => {
               </p>
             </div>
             <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 animate-in fade-in duration-700 ease-out">
-              {projects.map((project) => (
+              {projectsToShow.map((project) => (
                 <Card 
                   key={project.id} 
                   className="flex flex-col overflow-hidden bg-background/50 border-accent/20 shadow-lg shadow-accent/5 transition-all hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer hover:border-accent/40"
@@ -67,6 +70,14 @@ const PortfolioSection = () => {
                 </Card>
               ))}
             </div>
+            {projects.length > 4 && (
+              <div className="mt-12 text-center">
+                <Button variant="secondary" onClick={() => setShowAll(!showAll)}>
+                  {showAll ? t('portfolio.showLess') : t('portfolio.showMore')}
+                  {showAll ? <ChevronUp className="ml-2 h-4 w-4" /> : <ChevronDown className="ml-2 h-4 w-4" />}
+                </Button>
+              </div>
+            )}
         </div>
       </section>
       <ProjectDetailModal 

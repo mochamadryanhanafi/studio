@@ -92,6 +92,54 @@ export const projects: Project[] = [
     keywords: "branding, design, logo, identity, marketing",
     link: "#",
     github: "#",
+  },
+  {
+    id: 5,
+    title: "Project Epsilon",
+    description: "A machine learning model for sentiment analysis on social media.",
+    imageUrl: placeholderImages[17].imageUrl,
+    imageHint: placeholderImages[17].imageHint,
+    detailImageUrls: [placeholderImages[18].imageUrl],
+    projectContext: "Project Epsilon leverages natural language processing (NLP) to classify social media comments into positive, negative, or neutral sentiment, providing valuable insights for brands.",
+    keywords: "machine learning, nlp, sentiment analysis, python, tensorflow",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 6,
+    title: "Project Zeta",
+    description: "A secure and scalable e-commerce platform with a custom CMS.",
+    imageUrl: placeholderImages[19].imageUrl,
+    imageHint: placeholderImages[19].imageHint,
+    detailImageUrls: [placeholderImages[20].imageUrl],
+    projectContext: "Project Zeta is a full-stack e-commerce solution built with Node.js, and React, featuring a headless CMS for easy content management and a robust payment integration.",
+    keywords: "ecommerce, web development, nodejs, react, cms",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 7,
+    title: "Project Eta",
+    description: "An IoT system for smart home automation and energy monitoring.",
+    imageUrl: placeholderImages[21].imageUrl,
+    imageHint: placeholderImages[21].imageHint,
+    detailImageUrls: [placeholderImages[22].imageUrl],
+    projectContext: "Project Eta connects various home devices to a central hub, allowing users to control their home environment and monitor energy consumption through a mobile app.",
+    keywords: "iot, smart home, raspberry pi, python, mqtt",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 8,
+    title: "Project Theta",
+    description: "A real-time collaborative whiteboard application.",
+    imageUrl: placeholderImages[23].imageUrl,
+    imageHint: placeholderImages[23].imageHint,
+    detailImageUrls: [placeholderImages[24].imageUrl],
+    projectContext: "Project Theta allows multiple users to draw and brainstorm together in real-time using WebSockets and the HTML5 Canvas API.",
+    keywords: "collaboration, real-time, websockets, canvas, javascript",
+    link: "#",
+    github: "#",
   }
 ];
 
@@ -133,7 +181,7 @@ export const skills: Skill[] = [
   { name: "TensorFlow", icon: Cpu },
 ];
 
-export const galleryImages: GalleryImage[] = placeholderImages.slice(12);
+export const galleryImages: GalleryImage[] = placeholderImages.slice(12, 17);
 
 export const workExperience: TimelineItem[] = [
     {
@@ -189,4 +237,5 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 

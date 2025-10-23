@@ -28,7 +28,9 @@
   "portfolio": {
     "title": "Portofolio Saya",
     "subtitle": "Berikut adalah beberapa proyek yang saya banggakan. Masing-masing merupakan tantangan unik dan langkah maju dalam perjalanan saya sebagai pengembang.",
-    "liveDemo": "Demo Langsung"
+    "liveDemo": "Demo Langsung",
+    "showMore": "Tampilkan Lebih Banyak",
+    "showLess": "Tampilkan Lebih Sedikit"
   },
   "certificates": {
     "title": "Sertifikat & Kredensial",

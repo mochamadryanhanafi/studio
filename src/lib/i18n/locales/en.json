@@ -28,7 +28,9 @@
   "portfolio": {
     "title": "My Portfolio",
     "subtitle": "Here are some of the projects I'm proud to have worked on. Each one represents a unique challenge and a step forward in my journey as a developer.",
-    "liveDemo": "Live Demo"
+    "liveDemo": "Live Demo",
+    "showMore": "Show More",
+    "showLess": "Show Less"
   },
   "certificates": {
     "title": "Certificates & Credentials",
