@@ -178,7 +178,7 @@ export const education: TimelineItem[] = [
         title: "AWS re/Start – Cloud Computing Fundamentals",
         company: "PT Orbit Future Academy",
         date: "Agustus – Oktober 2025",
-        description: "Program AWS re/Start yang diselenggarakan oleh PT Orbit Future Academy merupakan pelatihan intensif selama tiga bulan untuk membangun kompetensi di bidang Cloud Computing dan Operasi TI. Peserta dibekali keterampilan dasar hingga lanjutan meliputi Linux, jaringan, keamanan, Python, basis data, serta layanan inti AWS seperti EC2, S3, CloudWatch, dan Auto Scaling. Program ini juga mengembangkan soft skill profesional guna mempersiapkan peserta menjadi talenta siap kerja di industri cloud dan teknologi informasi.",
+        description: "The AWS re/Start program, organized by PT Orbit Future Academy, is an intensive three-month training program to build competence in Cloud Computing and IT Operations. Participants are equipped with basic to advanced skills covering Linux, networking, security, Python, databases, and core AWS services such as EC2, S3, CloudWatch, and Auto Scaling. The program also develops professional soft skills to prepare participants to become work-ready talent in the cloud and information technology industry.",
         type: 'education'
     }
 ]
