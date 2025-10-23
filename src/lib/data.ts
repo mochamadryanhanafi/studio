@@ -156,6 +156,13 @@ export const workExperience: TimelineItem[] = [
         date: "Januari– Juni 2025",
         description: "Built a news portal application using the MERN stack (MongoDB, Express.js, React.js, Node.js). Developed a secure backend by implementing safeguards against common web attacks such as XSS filtering, CORS policies, and rate limiting. Integrated Redis and session cookies to enhance page loading speed and overall application performance. Designed and implemented a user-friendly frontend interface with a unique layout that distinguishes it from traditional news portals. Deployed the news portal application using Google Cloud Run on the Google Cloud Platform (GCP).",
         type: 'work'
+    },
+    {
+        title: "Backend Developer",
+        company: "Café Dewi Pandawa",
+        date: "September - Decemeber 2024",
+        description: "Developed a JWT authentication feature with bcrypt encryption to ensure secure user login. Integrated a machine learning model and Firebase Firestore into the application for data storage and analysis. Deployed the application using Google Cloud Run, ensuring stable and scalable performance. Collected over 400 manually annotated datasets and trained the model using TensorFlow Lite to improve detection accuracy. Actively collaborated with team members for 4 months to ensure smooth and effective model development and integration. Successfully integrated the machine learning model with the website and Firestore database for seamless data management",
+        type: 'work'
     }
 ];
 
