@@ -47,12 +47,12 @@ export type TimelineItem = {
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Project Alpha",
-    description: "A futuristic web platform for decentralized applications.",
+    title: "CleanEat",
+    description: "Real-Time Cloud-Based Dirty Table Monitoring System",
     imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa1_qwcszz.jpg",
     imageHint: "dashboard project",
     detailImageUrls: ["https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186476/pandawa2_dnkjft.jpg", "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186474/cleaneat_kha02e.png"],
-    projectContext: "Project Alpha is a cutting-edge platform built with Next.js and Solidity, aimed at revolutionizing dApp interactions.",
+    projectContext: "This system is designed to detect and monitor dirty tables in real time using CCTV cameras and machine learning. By leveraging a cloud-based infrastructure, it processes image data to identify unclean tables and displays the results on a web dashboard for efficient supervision. The solution integrates object detection models, Flask API, and cloud computing services to provide scalable, automated, and data-driven monitoring, improving cleanliness management and operational efficiency in environments such as canteens, restaurants, and public dining areas.",
     keywords: "web3, blockchain, decentralized, react, nextjs",
     link: "#",
     github: "#",
@@ -237,6 +237,7 @@ export const education: TimelineItem[] = [
         type: 'education'
     }
 ]
+
 
 
 
