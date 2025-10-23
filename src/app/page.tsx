@@ -17,10 +17,10 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <ProfileCalloutSection />
           <AboutSection />
           <PortfolioSection />
           <CertificatesSection />
+          <ProfileCalloutSection />
           <GalleryCarouselSection />
           <ContactSection />
         </div>
