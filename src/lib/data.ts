@@ -180,5 +180,13 @@ export const education: TimelineItem[] = [
         date: "Agustus – Oktober 2025",
         description: "The AWS re/Start program, organized by PT Orbit Future Academy, is an intensive three-month training program to build competence in Cloud Computing and IT Operations. Participants are equipped with basic to advanced skills covering Linux, networking, security, Python, databases, and core AWS services such as EC2, S3, CloudWatch, and Auto Scaling. The program also develops professional soft skills to prepare participants to become work-ready talent in the cloud and information technology industry.",
         type: 'education'
+    },
+    {
+        title: "Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka",
+        company: "Cloud Computing Cohort",
+        date: "September – December 2024",
+        description: "● Completed the Bangkit Academy program in 4 months. ● Gained in-depth knowledge of Google Cloud Platform (GCP) technologies and services, successfully completing all projects and assignments on time. ● Applied effective time management to balance the intensive Bangkit Academy schedule with university coursework. ● Earned multiple Dicoding certifications demonstrating proficiency in Cloud Computing and Modern Infrastructure. ● Successfully developed a Backend API within 1 month for MaternalCare, a Flask-based application providing maternal health services during pregnancy. ● Integrated Firebase Firestore for user data storage and NewsAPI to display the latest health-related articles.",
+        type: 'education'
     }
 ]
+
