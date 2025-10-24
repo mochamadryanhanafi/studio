@@ -6,7 +6,7 @@ import { projects, type Project } from '@/lib/data';
 import Image from 'next/image';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Github, ChevronDown, ChevronUp } from 'lucide-react';
+import { Github, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import ProjectDetailModal from './project-detail-modal';
 import { useTranslation } from '@/lib/i18n';
 import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
@@ -78,6 +78,14 @@ const PortfolioSection = () => {
                 </Button>
               </div>
             )}
+             <div className="mt-12 text-center">
+                <Button asChild variant="secondary" className="group transition-all duration-300 ease-in-out hover:scale-105">
+                    <a href="https://www.linkedin.com/in/mochamad-ryan-hanafi/details/projects/" target="_blank" rel="noopener noreferrer">
+                        More on LinkedIn
+                        <ExternalLink className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                    </a>
+                </Button>
+            </div>
         </div>
       </section>
       <ProjectDetailModal 
