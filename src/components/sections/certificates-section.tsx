@@ -52,7 +52,7 @@ const CertificatesSection = () => {
             <div className="mt-12 text-center">
                 <Button asChild variant="secondary" className="group transition-all duration-300 ease-in-out hover:scale-105">
                     <a href="https://www.linkedin.com/in/mochamad-ryan-hanafi/details/certifications/" target="_blank" rel="noopener noreferrer">
-                        and More (LinkedIn) 
+                        More on LinkedIn
                         <ExternalLink className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                     </a>
                 </Button>
