@@ -9,13 +9,16 @@ interface AnimateOnScrollProps {
   children: ReactNode;
   className?: string;
   variant?: AnimationVariant;
+  isReady?: boolean;
 }
 
-const AnimateOnScroll = ({ children, className, variant = 'fade-up' }: AnimateOnScrollProps) => {
+const AnimateOnScroll = ({ children, className, variant = 'fade-up', isReady = true }: AnimateOnScrollProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    if (!isReady) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -28,16 +31,17 @@ const AnimateOnScroll = ({ children, className, variant = 'fade-up' }: AnimateOn
       }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
-  }, []);
+  }, [isReady]);
 
   return (
     <div
@@ -45,7 +49,7 @@ const AnimateOnScroll = ({ children, className, variant = 'fade-up' }: AnimateOn
       className={cn(
         'aos-element',
         `aos-${variant}`,
-        { 'is-visible': isVisible },
+        { 'is-visible': isVisible && isReady },
         className
       )}
     >
