@@ -138,7 +138,7 @@ const LoadingScreen = ({ isLoading }: LoadingScreenProps) => {
   return (
     <div
       className={cn(
-        "fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background transition-opacity duration-300 ease-in-out",
+        "fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background transition-opacity duration-500 ease-in-out",
         isLoading ? "opacity-100" : "opacity-0 pointer-events-none"
       )}
     >

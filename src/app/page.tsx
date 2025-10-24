@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
       <LoadingScreen isLoading={isLoading} />
-      <div className={`flex flex-col min-h-dvh bg-background transition-opacity duration-500 ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className={`flex flex-col min-h-dvh bg-background transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Header />
         <WaveParticleAnimation />
         <main className="flex-grow">
