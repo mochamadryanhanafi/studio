@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Award, Lightbulb, Briefcase } from 'lucide-react';
@@ -16,7 +17,7 @@ const AchievementsSection = () => {
     },
     {
       name: "Years Works Experience",
-      value: "1",
+      value: "1+",
       icon: Briefcase,
     },
   ];
