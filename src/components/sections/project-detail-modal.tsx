@@ -7,7 +7,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github } from 'lucide-react';
+import { Github } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 
 interface ProjectDetailModalProps {
@@ -71,11 +71,6 @@ export default function ProjectDetailModal({ project, isOpen, onOpenChange }: Pr
           </div>
           
           <div className="flex flex-wrap gap-3 pt-4 border-t border-border/50">
-             <Button asChild>
-                <a href={project.link} target="_blank" rel="noopener noreferrer">
-                  {t('portfolio.liveDemo')} <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
               <Button asChild variant="outline">
                 <a href={project.github} target="_blank" rel="noopener noreferrer">
                   <Github className="mr-2 h-4 w-4" /> GitHub
