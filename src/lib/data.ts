@@ -92,7 +92,7 @@ export const projects: Project[] = [
     projectContext: "At PT Kita Bantu Indonesia, I contributed to the development of a freelancing mobile application designed to connect vendors and job seekers efficiently. My primary responsibility was to develop the mobile API using Laravel, ensuring secure, reliable, and high-performance service delivery. I implemented Clean Architecture principles to maintain a well-structured and scalable backend system, facilitating easier feature expansion and long-term maintainability. Additionally, I integrated RabbitMQ as a message broker to enable asynchronous and efficient data communication across multiple platforms. I worked closely with the web and mobile development teams to design, implement, and optimize backend payment features, ensuring seamless transaction processing and user experience across all platforms.",
     keywords: "Laravel, Clean Architecture, RabbitMQ, REST API, Payment Integration, Backend Development",
     link: "#",
-    github: "#",
+    github: "",
   }
 ];
 
@@ -248,3 +248,6 @@ export const education: TimelineItem[] = [
     
 
 
+
+
+    

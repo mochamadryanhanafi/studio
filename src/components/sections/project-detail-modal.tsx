@@ -71,14 +71,18 @@ export default function ProjectDetailModal({ project, isOpen, onOpenChange }: Pr
           </div>
           
           <div className="flex flex-wrap gap-3 pt-4 border-t border-border/50">
-              <Button asChild variant="outline">
-                <a href={project.github} target="_blank" rel="noopener noreferrer">
-                  <Github className="mr-2 h-4 w-4" /> GitHub
-                </a>
-              </Button>
+              {project.github && (
+                <Button asChild variant="outline">
+                  <a href={project.github} target="_blank" rel="noopener noreferrer">
+                    <Github className="mr-2 h-4 w-4" /> GitHub
+                  </a>
+                </Button>
+              )}
           </div>
         </div>
       </DialogContent>
     </Dialog>
   );
 }
+
+    

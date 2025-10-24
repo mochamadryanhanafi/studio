@@ -57,13 +57,15 @@ const PortfolioSection = () => {
                     <p className="mt-2 text-base text-foreground/70 line-clamp-3">{project.description}</p>
                   </CardContent>
                   <CardFooter className="flex-col items-start gap-4">
-                     <div className="flex gap-2">
-                        <Button asChild variant="outline" onClick={(e) => e.stopPropagation()}>
-                          <a href={project.github} target="_blank" rel="noopener noreferrer">
-                            <Github className="mr-2 h-4 w-4" /> GitHub
-                          </a>
-                        </Button>
-                    </div>
+                     {project.github && (
+                        <div className="flex gap-2">
+                            <Button asChild variant="outline" onClick={(e) => e.stopPropagation()}>
+                              <a href={project.github} target="_blank" rel="noopener noreferrer">
+                                <Github className="mr-2 h-4 w-4" /> GitHub
+                              </a>
+                            </Button>
+                        </div>
+                    )}
                   </CardFooter>
                 </Card>
               ))}
@@ -88,3 +90,5 @@ const PortfolioSection = () => {
 };
 
 export default PortfolioSection;
+
+    
