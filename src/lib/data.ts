@@ -69,6 +69,18 @@ export const projects: Project[] = [
     keywords: "Flask, Firebase Firestore, Google Cloud, NewsAPI, Backend",
     link: "#",
     github: "https://github.com/mochamadryanhanafi/MaternalCare-API",
+  },
+  {
+    id: 3,
+    title: "DailyVerse — News Portal Development",
+    description: "Scalable MERN Stack News Platform with Secure Backend and Cloud Deployment",
+    imageUrl: "https://images.unsplash.com/photo-1495020689067-958852a7765e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxOZXdzJTIwUG9ydGFsfGVufDB8fHx8MTc2MTExMjU3NHww&ixlib=rb-4.1.0&q=80&w=1080",
+    imageHint: "news portal",
+    detailImageUrls: ["https://images.unsplash.com/photo-1585829365295-ab7cd400c167?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxOZXdzJTIwUG9ydGFsfGVufDB8fHx8MTc2MTExMjU3NHww&ixlib=rb-4.1.0&q=80&w=1080"],
+    projectContext: "DailyVerse is a modern news portal application developed over six months using the MERN stack — MongoDB, Express.js, React.js, and Node.js. The project focused on delivering a secure, high-performance, and user-friendly platform for reading and managing news articles. I implemented multiple security measures, including XSS filtering, strict CORS policies, and rate limiting, to safeguard the backend against common web vulnerabilities. To enhance speed and responsiveness, I integrated Redis caching and session cookies, which significantly improved reload times and server efficiency. The frontend was designed with a unique layout and modern UI components, differentiating it from typical news portals. Finally, the entire application was deployed on Google Cloud Run within Google Cloud Platform (GCP), ensuring scalability, stability, and seamless cloud integration.",
+    keywords: "MERN, MongoDB, Express.js, React.js, Node.js, Redis, Google Cloud Run, GCP",
+    link: "#",
+    github: "#",
   }
 ];
 
@@ -219,3 +231,6 @@ export const education: TimelineItem[] = [
     
 
 
+
+
+    
