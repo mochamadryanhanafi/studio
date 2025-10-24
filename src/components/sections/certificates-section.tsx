@@ -19,7 +19,7 @@ const CertificatesSection = () => {
       <section id="certificates" className="py-24 sm:py-32 relative">
         <PaperAirplaneAnimation />
         <div className="relative z-10">
-            <div className="mx-auto max-w-2xl text-center animate-in fade-in duration-700 ease-out">
+            <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
                 {t('certificates.title')}
               </h2>
@@ -27,7 +27,7 @@ const CertificatesSection = () => {
                 {t('certificates.subtitle')}
               </p>
             </div>
-            <div className="mt-16 mx-auto max-w-3xl space-y-6 animate-in fade-in duration-700 ease-out">
+            <div className="mt-16 mx-auto max-w-3xl space-y-6">
               {certificates.map((cert) => (
                 <Card
                   key={cert.id}

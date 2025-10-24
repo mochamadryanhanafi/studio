@@ -43,7 +43,7 @@ const ContactSection = () => {
     <section id="contact" className="py-24 sm:py-32 relative">
       <Contact3D />
       <div className="relative z-10">
-        <div className="mx-auto max-w-2xl text-center animate-in fade-in duration-700 ease-out">
+        <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t('contact.title')}
           </h2>
@@ -51,7 +51,7 @@ const ContactSection = () => {
             {t('contact.subtitle')}
           </p>
         </div>
-        <div className="mx-auto mt-16 max-w-xl animate-in fade-in duration-700 ease-out">
+        <div className="mx-auto mt-16 max-w-xl">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
               <FormField

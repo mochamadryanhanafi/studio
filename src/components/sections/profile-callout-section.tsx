@@ -5,7 +5,7 @@ import Profile3D from '../interactive/profile-3d';
 
 const ProfileCalloutSection = () => {
   return (
-    <section className="py-24 sm:py-32 animate-in fade-in duration-700 ease-out">
+    <section className="py-24 sm:py-32">
         <div className="relative flex flex-col items-center text-center">
             <div className="relative w-48 h-48 md:w-56 md:h-56">
                 <Profile3D />

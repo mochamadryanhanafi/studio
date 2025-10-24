@@ -10,7 +10,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-24 sm:py-32 relative">
       <About3D />
-      <div className="flex flex-col gap-16 animate-in fade-in duration-700 ease-out relative z-10">
+      <div className="flex flex-col gap-16 relative z-10">
         <div className="grid grid-cols-1 items-center">
             <div className="space-y-6 max-w-2xl mx-auto text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

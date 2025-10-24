@@ -10,6 +10,7 @@ import GalleryCarouselSection from '@/components/sections/gallery-carousel-secti
 import WaveParticleAnimation from '@/components/interactive/wave-particle-animation';
 import ProfileCalloutSection from '@/components/sections/profile-callout-section';
 import AchievementsSection from '@/components/sections/achievements-section';
+import AnimateOnScroll from '@/components/interactive/animate-on-scroll';
 
 export default function Home() {
   return (
@@ -19,14 +20,30 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <ProfileCalloutSection />
-          <AchievementsSection />
-          <AboutSection />
-          <TimelineSection />
-          <PortfolioSection />
-          <CertificatesSection />
-          <GalleryCarouselSection />
-          <ContactSection />
+          <AnimateOnScroll>
+            <ProfileCalloutSection />
+          </AnimateOnScroll>
+          <AnimateOnScroll>
+            <AchievementsSection />
+          </AnimateOnScroll>
+          <AnimateOnScroll>
+            <AboutSection />
+          </AnimateOnScroll>
+          <AnimateOnScroll>
+            <TimelineSection />
+          </AnimateOnScroll>
+          <AnimateOnScroll>
+            <PortfolioSection />
+          </AnimateOnScroll>
+          <AnimateOnScroll>
+            <CertificatesSection />
+          </AnimateOnScroll>
+          <AnimateOnScroll>
+            <GalleryCarouselSection />
+          </AnimateOnScroll>
+          <AnimateOnScroll>
+            <ContactSection />
+          </AnimateOnScroll>
         </div>
       </main>
       <Footer />
