@@ -20,28 +20,28 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="zoom-in">
             <ProfileCalloutSection />
           </AnimateOnScroll>
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="fade-up">
             <AchievementsSection />
           </AnimateOnScroll>
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="fade-right">
             <AboutSection />
           </AnimateOnScroll>
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="fade-up">
             <TimelineSection />
           </AnimateOnScroll>
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="zoom-in">
             <PortfolioSection />
           </AnimateOnScroll>
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="fade-up">
             <CertificatesSection />
           </AnimateOnScroll>
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="fade-right">
             <GalleryCarouselSection />
           </AnimateOnScroll>
-          <AnimateOnScroll>
+          <AnimateOnScroll variant="zoom-in">
             <ContactSection />
           </AnimateOnScroll>
         </div>

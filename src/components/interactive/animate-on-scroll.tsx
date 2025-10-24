@@ -3,12 +3,15 @@
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 
+type AnimationVariant = 'fade-up' | 'fade-down' | 'fade-right' | 'zoom-in';
+
 interface AnimateOnScrollProps {
   children: ReactNode;
   className?: string;
+  variant?: AnimationVariant;
 }
 
-const AnimateOnScroll = ({ children, className }: AnimateOnScrollProps) => {
+const AnimateOnScroll = ({ children, className, variant = 'fade-up' }: AnimateOnScrollProps) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
 
@@ -40,7 +43,8 @@ const AnimateOnScroll = ({ children, className }: AnimateOnScrollProps) => {
     <div
       ref={ref}
       className={cn(
-        'fade-in-on-scroll',
+        'aos-element',
+        `aos-${variant}`,
         { 'is-visible': isVisible },
         className
       )}
