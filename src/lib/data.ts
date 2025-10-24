@@ -81,6 +81,18 @@ export const projects: Project[] = [
     keywords: "MERN, MongoDB, Express.js, React.js, Node.js, Redis, Google Cloud Run, GCP",
     link: "#",
     github: "https://github.com/mochamadryanhanafi/dailyverse",
+  },
+  {
+    id: 4,
+    title: "PT Kita Bantu Indonesia — Freelancing Platform Backend Development",
+    description: "Scalable Laravel API with Clean Architecture and RabbitMQ Integration",
+    imageUrl: "https://images.unsplash.com/photo-1658297063569-162817482fb6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjBwbGF0Zm9ybXxlbnwwfHx8fDE3NjExOTU1Nzd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    imageHint: "ecommerce platform",
+    detailImageUrls: [],
+    projectContext: "At PT Kita Bantu Indonesia, I contributed to the development of a freelancing mobile application designed to connect vendors and job seekers efficiently. My primary responsibility was to develop the mobile API using Laravel, ensuring secure, reliable, and high-performance service delivery. I implemented Clean Architecture principles to maintain a well-structured and scalable backend system, facilitating easier feature expansion and long-term maintainability. Additionally, I integrated RabbitMQ as a message broker to enable asynchronous and efficient data communication across multiple platforms. I worked closely with the web and mobile development teams to design, implement, and optimize backend payment features, ensuring seamless transaction processing and user experience across all platforms.",
+    keywords: "Laravel, Clean Architecture, RabbitMQ, REST API, Payment Integration, Backend Development",
+    link: "#",
+    github: "#",
   }
 ];
 
@@ -234,3 +246,4 @@ export const education: TimelineItem[] = [
 
 
     
+
