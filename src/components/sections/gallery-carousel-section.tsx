@@ -4,6 +4,7 @@ import Image from "next/image";
 import { galleryImages } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n";
+import PaperAirplaneAnimation from "../interactive/paper-airplane-animation";
 
 export default function GalleryCarouselSection() {
   const { t } = useTranslation();
@@ -11,7 +12,9 @@ export default function GalleryCarouselSection() {
   const duplicatedImages = [...galleryImages, ...galleryImages];
 
   return (
-    <section id="gallery" className="py-24 sm:py-32">
+    <section id="gallery" className="py-24 sm:py-32 relative">
+      <PaperAirplaneAnimation />
+      <div className="relative z-10">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
             {t('gallery.title')}
@@ -20,25 +23,26 @@ export default function GalleryCarouselSection() {
             {t('gallery.subtitle')}
           </p>
         </div>
-      <div className="w-full overflow-hidden group">
-        <div className="flex animate-scroll-x group-hover:[animation-play-state:running]">
-          {duplicatedImages.map((image, index) => (
-            <div key={index} className="flex-shrink-0 w-full sm:w-1/2 md:w-[450px] p-3">
-                <Card className="overflow-hidden">
-                  <CardContent className="p-0">
-                    <div className="aspect-video relative">
-                      <Image
-                        src={image.imageUrl}
-                        alt={image.imageHint}
-                        fill
-                        className="object-cover"
-                        data-ai-hint={image.imageHint}
-                      />
-                    </div>
-                  </CardContent>
-                </Card>
-            </div>
-          ))}
+        <div className="w-full overflow-hidden group">
+          <div className="flex animate-scroll-x group-hover:[animation-play-state:running]">
+            {duplicatedImages.map((image, index) => (
+              <div key={index} className="flex-shrink-0 w-full sm:w-1/2 md:w-[450px] p-3">
+                  <Card className="overflow-hidden">
+                    <CardContent className="p-0">
+                      <div className="aspect-video relative">
+                        <Image
+                          src={image.imageUrl}
+                          alt={image.imageHint}
+                          fill
+                          className="object-cover"
+                          data-ai-hint={image.imageHint}
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
