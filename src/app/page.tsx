@@ -9,6 +9,7 @@ import CertificatesSection from '@/components/sections/certificates-section';
 import GalleryCarouselSection from '@/components/sections/gallery-carousel-section';
 import WaveParticleAnimation from '@/components/interactive/wave-particle-animation';
 import ProfileCalloutSection from '@/components/sections/profile-callout-section';
+import AchievementsSection from '@/components/sections/achievements-section';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <main className="flex-grow">
         <HeroSection />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <AchievementsSection />
           <AboutSection />
           <TimelineSection />
           <PortfolioSection />
