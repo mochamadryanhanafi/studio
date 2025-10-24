@@ -3,13 +3,13 @@
 import { skills, type Skill } from '@/lib/data';
 import { useTranslation } from '@/lib/i18n';
 import { Badge } from '@/components/ui/badge';
-import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
+import About3D from '../interactive/about-3d';
 
 const AboutSection = () => {
   const { t } = useTranslation();
   return (
     <section id="about" className="py-24 sm:py-32 relative">
-      <PaperAirplaneAnimation />
+      <About3D />
       <div className="flex flex-col gap-16 relative z-10">
         <div className="grid grid-cols-1 items-center">
             <div className="space-y-6 max-w-2xl mx-auto text-center">

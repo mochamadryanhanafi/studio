@@ -5,7 +5,7 @@ import { workExperience, education, type TimelineItem as TimelineItemType } from
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '../ui/card';
 import { Briefcase, GraduationCap } from 'lucide-react';
-import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
+import Timeline3D from '../interactive/timeline-3d';
 
 const TimelineItem = ({ item }: { item: TimelineItemType }) => (
   <li className="mb-10 ms-6">
@@ -31,7 +31,7 @@ const TimelineSection = () => {
 
   return (
     <section id="timeline" className="py-24 sm:py-32 relative">
-      <PaperAirplaneAnimation />
+      <Timeline3D />
       <div className="mx-auto max-w-4xl text-center relative z-10">
         <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
           {t('timeline.title')}
