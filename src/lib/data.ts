@@ -57,6 +57,18 @@ export const projects: Project[] = [
     keywords: "Flask, Python, firestore, Goodle Coud Platform",
     link: "#",
     github: "#",
+  },
+  {
+    id: 2,
+    title: "MaternalCare API Development — Flask-based Health Platform for Expecting Mothers",
+    description: "Secure Cloud-Hosted API with Firebase Firestore Integration and Health News Aggregation",
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761203000/maternal_care_placeholder.jpg",
+    imageHint: "health app",
+    detailImageUrls: [],
+    projectContext: "This project involved the development of a complete backend API for MaternalCare, a web-based health platform built with Flask that supports maternal wellness during pregnancy. Over the course of one month, I designed and implemented core features that allow users to register, log in, reset passwords, and securely access personalized maternal health information through various API endpoints. The backend seamlessly integrates with Firebase Firestore for reliable user data management and utilizes the NewsAPI to deliver up-to-date articles related to maternal and prenatal health. Additionally, the entire API system was successfully deployed on Google Cloud, leveraging both Cloud Run and App Engine to ensure scalability, performance, and ease of maintenance in a production environment.",
+    keywords: "Flask, Firebase Firestore, Google Cloud, NewsAPI, Backend",
+    link: "#",
+    github: "#",
   }
 ];
 
@@ -205,3 +217,4 @@ export const education: TimelineItem[] = [
     
 
     
+
