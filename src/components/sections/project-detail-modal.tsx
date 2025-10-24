@@ -1,4 +1,3 @@
-
 "use client";
 
 import type { Project } from '@/lib/data';
@@ -84,5 +83,3 @@ export default function ProjectDetailModal({ project, isOpen, onOpenChange }: Pr
     </Dialog>
   );
 }
-
-    

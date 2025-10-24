@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useState } from 'react';
@@ -98,5 +97,3 @@ const PortfolioSection = () => {
 };
 
 export default PortfolioSection;
-
-    
