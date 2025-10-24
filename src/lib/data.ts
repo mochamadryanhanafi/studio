@@ -62,13 +62,13 @@ export const projects: Project[] = [
     id: 2,
     title: "MaternalCare API Development — Flask-based Health Platform for Expecting Mothers",
     description: "Secure Cloud-Hosted API with Firebase Firestore Integration and Health News Aggregation",
-    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761203000/maternal_care_placeholder.jpg",
+    imageUrl: "https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186473/ss-api_hyhw1x.png",
     imageHint: "health app",
-    detailImageUrls: [],
+    detailImageUrls: ["https://res.cloudinary.com/dnvulh8wx/image/upload/v1761186473/maternalgithub_m6doz0.png"],
     projectContext: "This project involved the development of a complete backend API for MaternalCare, a web-based health platform built with Flask that supports maternal wellness during pregnancy. Over the course of one month, I designed and implemented core features that allow users to register, log in, reset passwords, and securely access personalized maternal health information through various API endpoints. The backend seamlessly integrates with Firebase Firestore for reliable user data management and utilizes the NewsAPI to deliver up-to-date articles related to maternal and prenatal health. Additionally, the entire API system was successfully deployed on Google Cloud, leveraging both Cloud Run and App Engine to ensure scalability, performance, and ease of maintenance in a production environment.",
     keywords: "Flask, Firebase Firestore, Google Cloud, NewsAPI, Backend",
     link: "#",
-    github: "#",
+    github: "https://github.com/mochamadryanhanafi/MaternalCare-API",
   }
 ];
 
@@ -217,4 +217,5 @@ export const education: TimelineItem[] = [
     
 
     
+
 
