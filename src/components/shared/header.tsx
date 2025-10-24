@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-4 z-50 mx-auto w-full max-w-5xl px-4">
-      <div className="container flex h-14 items-center rounded-full border border-border/40 bg-background/80 backdrop-blur-md">
+      <div className="container flex h-14 items-center rounded-full border border-border/40 bg-background/50 backdrop-blur-md">
         <a href="#" className="mr-6 flex items-center space-x-2">
           <Cloud className="h-6 w-6 text-accent" />
           <span className="font-bold font-headline">Ryan Hanafi</span>
