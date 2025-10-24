@@ -4,6 +4,7 @@
     "timeline": "Timeline",
     "portfolio": "Portfolio",
     "certificates": "Certificates",
+    "services": "Services",
     "contact": "Contact"
   },
   "footer": {
@@ -39,6 +40,43 @@
   "gallery": {
     "title": "Gallery",
     "subtitle": "A glimpse into my creative process and design explorations."
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "Providing high-quality web solutions tailored to your needs. Here are some of the services I offer.",
+    "static": {
+      "title": "Static Web",
+      "description": "Ideal for portfolios, landing pages, or company profiles that require a professional and fast online presence.",
+      "priceRange": "Starts from IDR 1,000,000",
+      "features": {
+        "feature1": "Up to 5 static pages",
+        "feature2": "Responsive design",
+        "feature3": "Basic SEO setup"
+      }
+    },
+    "database": {
+      "title": "Web with Database",
+      "description": "Perfect for dynamic websites like blogs, e-commerce, or platforms that need content and user data management.",
+      "priceRange": "Starts from IDR 5,000,000",
+      "features": {
+        "feature1": "Includes all Static Web features",
+        "feature2": "Database integration (SQL/NoSQL)",
+        "feature3": "Content Management System (CMS)",
+        "feature4": "User authentication"
+      }
+    },
+    "ml": {
+      "title": "Web with Custom ML",
+      "description": "Advanced solutions for businesses that need custom AI/ML features like recommendation systems or predictive analysis.",
+      "priceRange": "Starts from IDR 10,000,000",
+      "features": {
+        "feature1": "Includes all Database Web features",
+        "feature2": "Custom Machine Learning model",
+        "feature3": "API for model integration",
+        "feature4": "Advanced data analytics"
+      }
+    },
+    "cta": "Discuss Project"
   },
   "contact": {
     "title": "Get In Touch",

@@ -4,6 +4,7 @@
     "timeline": "Linimasa",
     "portfolio": "Portofolio",
     "certificates": "Sertifikat",
+    "services": "Layanan",
     "contact": "Kontak"
   },
   "footer": {
@@ -39,6 +40,43 @@
   "gallery": {
     "title": "Galeri",
     "subtitle": "Sekilas tentang proses kreatif dan eksplorasi desain saya."
+  },
+  "services": {
+    "title": "Layanan Saya",
+    "subtitle": "Menyediakan solusi web berkualitas tinggi yang disesuaikan dengan kebutuhan Anda. Berikut adalah beberapa layanan yang saya tawarkan.",
+    "static": {
+      "title": "Web Statis",
+      "description": "Ideal untuk portofolio, halaman arahan, atau profil perusahaan yang memerlukan kehadiran online profesional dan cepat.",
+      "priceRange": "Mulai dari Rp 1.000.000",
+      "features": {
+        "feature1": "Hingga 5 halaman statis",
+        "feature2": "Desain responsif",
+        "feature3": "Pengaturan SEO dasar"
+      }
+    },
+    "database": {
+      "title": "Web dengan Database",
+      "description": "Sempurna untuk situs web dinamis seperti blog, e-commerce, atau platform yang membutuhkan manajemen konten dan data pengguna.",
+      "priceRange": "Mulai dari Rp 5.000.000",
+      "features": {
+        "feature1": "Mencakup semua fitur Web Statis",
+        "feature2": "Integrasi database (SQL/NoSQL)",
+        "feature3": "Sistem Manajemen Konten (CMS)",
+        "feature4": "Otentikasi pengguna"
+      }
+    },
+    "ml": {
+      "title": "Web dengan ML Kustom",
+      "description": "Solusi canggih untuk bisnis yang memerlukan fitur AI/ML khusus seperti sistem rekomendasi atau analisis prediktif.",
+      "priceRange": "Mulai dari Rp 10.000.000",
+      "features": {
+        "feature1": "Mencakup semua fitur Web Database",
+        "feature2": "Model Machine Learning kustom",
+        "feature3": "API untuk integrasi model",
+        "feature4": "Analitik data tingkat lanjut"
+      }
+    },
+    "cta": "Diskusikan Proyek"
   },
   "contact": {
     "title": "Hubungi Saya",

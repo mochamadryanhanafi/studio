@@ -15,6 +15,7 @@ import ProfileCalloutSection from '@/components/sections/profile-callout-section
 import AchievementsSection from '@/components/sections/achievements-section';
 import AnimateOnScroll from '@/components/interactive/animate-on-scroll';
 import LoadingScreen from '@/components/shared/loading-screen';
+import ServicesSection from '@/components/sections/services-section';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -67,6 +68,9 @@ export default function Home() {
             </AnimateOnScroll>
             <AnimateOnScroll variant="fade-right" isReady={isAnimationReady}>
               <GalleryCarouselSection />
+            </AnimateOnScroll>
+            <AnimateOnScroll variant="fade-up" isReady={isAnimationReady}>
+              <ServicesSection />
             </AnimateOnScroll>
             <AnimateOnScroll variant="zoom-in" isReady={isAnimationReady}>
               <ContactSection />

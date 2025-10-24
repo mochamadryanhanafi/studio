@@ -21,6 +21,7 @@ const Header = () => {
     { href: '#timeline', label: t('header.timeline') },
     { href: '#portfolio', label: t('header.portfolio') },
     { href: '#certificates', label: t('header.certificates') },
+    { href: '#services', label: t('header.services') },
     { href: '#contact', label: t('header.contact') },
   ];
 

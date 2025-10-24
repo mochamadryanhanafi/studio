@@ -1,7 +1,7 @@
 
 import { placeholderImages } from './placeholder-images.json';
 import EthersJSIcon from '@/components/icons/ethers-js-icon';
-import { Code, Server, Database, GitBranch, PenTool, Wind, Layers, Settings, Puzzle, Cpu, Cloud, Terminal } from 'lucide-react';
+import { Code, Server, Database, GitBranch, PenTool, Wind, Layers, Settings, Puzzle, Cpu, Cloud, Terminal, Globe, BrainCircuit } from 'lucide-react';
 
 export type Project = {
   id: number;
@@ -43,6 +43,14 @@ export type TimelineItem = {
     date: string;
     description: string;
     type: 'work' | 'education';
+}
+
+export type Service = {
+    titleKey: string;
+    descriptionKey: string;
+    priceRangeKey: string;
+    featuresKey: string[];
+    icon: React.ComponentType<{ className?: string }>;
 }
 
 export const projects: Project[] = [
@@ -227,27 +235,40 @@ export const education: TimelineItem[] = [
     }
 ]
 
-
-
-
-
-
-
-
-
-
-
-
-    
-
-    
-
-
-
-
-    
-
-
-
-
-    
+export const services: Service[] = [
+    {
+        titleKey: "services.static.title",
+        descriptionKey: "services.static.description",
+        priceRangeKey: "services.static.priceRange",
+        featuresKey: [
+            "services.static.features.feature1",
+            "services.static.features.feature2",
+            "services.static.features.feature3",
+        ],
+        icon: Globe,
+    },
+    {
+        titleKey: "services.database.title",
+        descriptionKey: "services.database.description",
+        priceRangeKey: "services.database.priceRange",
+        featuresKey: [
+            "services.database.features.feature1",
+            "services.database.features.feature2",
+            "services.database.features.feature3",
+            "services.database.features.feature4",
+        ],
+        icon: Database,
+    },
+    {
+        titleKey: "services.ml.title",
+        descriptionKey: "services.ml.description",
+        priceRangeKey: "services.ml.priceRange",
+        featuresKey: [
+            "services.ml.features.feature1",
+            "services.ml.features.feature2",
+            "services.ml.features.feature3",
+            "services.ml.features.feature4",
+        ],
+        icon: BrainCircuit,
+    }
+];
