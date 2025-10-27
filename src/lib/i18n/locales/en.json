@@ -1,3 +1,4 @@
+
 {
   "header": {
     "about": "About",
@@ -47,7 +48,7 @@
     "static": {
       "title": "Static Web",
       "description": "Ideal for portfolios, landing pages, or company profiles that require a professional and fast online presence.",
-      "priceRange": "Starts from IDR 500,000",
+      "priceRange": "Starts from IDR 499K",
       "features": {
         "feature1": "Up to 5 static pages",
         "feature2": "Responsive design",
