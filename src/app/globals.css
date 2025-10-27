@@ -118,7 +118,7 @@ body {
 }
 
 .sun {
-  background-color: red;
+  background-color: hsl(var(--primary));
   top: -1050px;
   left: -300px;
   animation-delay: 1s;
@@ -126,7 +126,7 @@ body {
 }
 
 .sun2 {
-  background-color: orange;
+  background-color: hsl(var(--accent));
   top: -1050px;
   left: -1200px;
   animation-delay: 2s;
@@ -134,7 +134,7 @@ body {
 }
 
 .sun3 {
-  background-color: yellow;
+  background-color: hsl(var(--secondary));
   top: -1050px;
   left: -600px;
   animation-delay: 0s;
