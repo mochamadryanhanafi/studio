@@ -3,13 +3,13 @@
 import { skills, type Skill } from '@/lib/data';
 import { useTranslation } from '@/lib/i18n';
 import { Badge } from '@/components/ui/badge';
-import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
 
 const AboutSection = () => {
   const { t } = useTranslation();
   return (
-    <section id="about" className="py-24 sm:py-32 relative">
-      <PaperAirplaneAnimation />
+    <section id="about" className="py-24 sm:py-32 relative overflow-hidden">
+      <div className="absolute -bottom-1/2 -left-1/2 w-full h-full rounded-full bg-primary/5 opacity-50 blur-3xl" />
+      <div className="absolute -top-1/4 -right-1/3 w-1/2 h-1/2 rounded-full bg-accent/10 opacity-60 blur-3xl" />
       <div className="flex flex-col gap-16 relative z-10">
         <div className="grid grid-cols-1 items-center">
             <div className="space-y-6 max-w-2xl mx-auto text-center">
@@ -29,7 +29,7 @@ const AboutSection = () => {
           </h3>
             <div className="flex flex-wrap gap-3 justify-center">
               {skills.map((skill) => (
-                <Badge key={skill.name} variant="default" className="text-sm py-2 px-4 shadow-md bg-primary text-primary-foreground hover:bg-primary/80 transition-all duration-300 transform hover:scale-105">
+                <Badge key={skill.name} variant="default" className="text-sm py-2 px-4 shadow-md bg-primary/90 text-primary-foreground hover:bg-primary/80 transition-all duration-300 transform hover:scale-105 backdrop-blur-sm">
                   {skill.name}
                 </Badge>
               ))}

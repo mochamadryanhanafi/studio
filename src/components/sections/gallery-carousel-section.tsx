@@ -4,7 +4,6 @@ import Image from "next/image";
 import { galleryImages } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTranslation } from "@/lib/i18n";
-import PaperAirplaneAnimation from "../interactive/paper-airplane-animation";
 
 export default function GalleryCarouselSection() {
   const { t } = useTranslation();
@@ -13,7 +12,6 @@ export default function GalleryCarouselSection() {
 
   return (
     <section id="gallery" className="py-24 sm:py-32 relative">
-      <PaperAirplaneAnimation />
       <div className="relative z-10">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

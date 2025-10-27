@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Github, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import ProjectDetailModal from './project-detail-modal';
 import { useTranslation } from '@/lib/i18n';
-import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
 
 const PortfolioSection = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -20,7 +19,6 @@ const PortfolioSection = () => {
   return (
     <>
       <section id="portfolio" className="py-24 sm:py-32 relative">
-        <PaperAirplaneAnimation />
         <div className="relative z-10">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -34,7 +32,7 @@ const PortfolioSection = () => {
               {projectsToShow.map((project) => (
                 <Card 
                   key={project.id} 
-                  className="group flex flex-col overflow-hidden bg-background/50 border-accent/20 shadow-lg shadow-accent/5 transition-all hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 cursor-pointer hover:border-accent/40"
+                  className="group flex flex-col overflow-hidden bg-card/50 border-border/30 backdrop-blur-sm shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer hover:border-accent/40"
                   onClick={() => setSelectedProject(project)}
                 >
                    <div className="relative">

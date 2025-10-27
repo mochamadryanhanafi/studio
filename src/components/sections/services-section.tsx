@@ -5,13 +5,12 @@ import { services, type Service } from "@/lib/data";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check, ArrowRight } from "lucide-react";
-import PaperAirplaneAnimation from "../interactive/paper-airplane-animation";
 
 const ServiceCard = ({ service }: { service: Service }) => {
   const { t } = useTranslation();
 
   return (
-    <Card className="flex flex-col border-accent/20 shadow-lg shadow-accent/5 transition-all hover:shadow-xl hover:shadow-accent/10 hover:-translate-y-1 hover:border-accent/40">
+    <Card className="flex flex-col border-border/30 bg-card/50 backdrop-blur-sm shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 hover:border-accent/40">
       <CardHeader className="items-center text-center">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary mb-4">
           <service.icon className="h-8 w-8" />
@@ -49,7 +48,6 @@ const ServicesSection = () => {
 
   return (
     <section id="services" className="py-24 sm:py-32 relative">
-      <PaperAirplaneAnimation />
       <div className="relative z-10">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

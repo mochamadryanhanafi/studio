@@ -7,7 +7,6 @@ import { Badge } from '@/components/ui/badge';
 import { Award, ExternalLink } from 'lucide-react';
 import CertificateDetailModal from './certificate-detail-modal';
 import { useTranslation } from '@/lib/i18n';
-import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
 import { Button } from '../ui/button';
 
 const CertificatesSection = () => {
@@ -17,7 +16,6 @@ const CertificatesSection = () => {
   return (
     <>
       <section id="certificates" className="py-24 sm:py-32 relative">
-        <PaperAirplaneAnimation />
         <div className="relative z-10">
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -31,7 +29,7 @@ const CertificatesSection = () => {
               {certificates.map((cert) => (
                 <Card
                   key={cert.id}
-                  className="group flex items-center overflow-hidden bg-background/50 border-border/60 shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer"
+                  className="group flex items-center overflow-hidden bg-card/50 border-border/30 backdrop-blur-sm shadow-lg shadow-primary/5 transition-all hover:shadow-xl hover:shadow-primary/10 hover:-translate-y-1 cursor-pointer"
                   onClick={() => setSelectedCertificate(cert)}
                 >
                   <CardHeader className="p-4">
