@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Phone } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
-import Contact3D from '../interactive/contact-3d';
+import PaperAirplaneAnimation from '../interactive/paper-airplane-animation';
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -39,7 +39,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-24 sm:py-32 relative">
-      <Contact3D />
+      <PaperAirplaneAnimation />
       <div className="relative z-10">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

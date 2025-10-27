@@ -44,7 +44,6 @@ export default function Home() {
       <LoadingScreen isLoading={isLoading} />
       <div className={`flex flex-col min-h-dvh bg-background transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}>
         <Header />
-        <WaveParticleAnimation />
         <main className="flex-grow">
           <HeroSection />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
