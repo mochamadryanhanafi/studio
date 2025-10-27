@@ -23,7 +23,7 @@ const Profile3D = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
 
-    const particleCount = 1000;
+    const particleCount = 2000;
     const radius = 2.5;
 
     const positions = new Float32Array(particleCount * 3);

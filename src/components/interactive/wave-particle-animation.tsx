@@ -28,7 +28,7 @@ const WaveParticleAnimation = () => {
     currentMount.appendChild(renderer.domElement);
     
     // Particles
-    const particleCount = 2000;
+    const particleCount = 5000;
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
     

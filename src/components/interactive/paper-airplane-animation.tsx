@@ -26,7 +26,7 @@ const PaperAirplaneAnimation = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
 
-    const airplaneCount = 30;
+    const airplaneCount = 100;
     
     // Paper Airplane Geometry
     const airplaneGeometry = new THREE.BufferGeometry();
