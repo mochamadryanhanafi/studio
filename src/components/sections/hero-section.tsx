@@ -17,7 +17,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative w-full h-[calc(100dvh-8rem)] min-h-[500px] flex items-center justify-center text-center overflow-hidden">
-      <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
+      <div className="absolute inset-0 -z-10 h-full w-full bg-transparent"></div>
       <AnimateOnScroll isReady={true} variant='zoom-in' className="relative z-10 container px-4 sm:px-6 lg:px-8 flex flex-col items-center">
         <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
           {t('hero.title')}

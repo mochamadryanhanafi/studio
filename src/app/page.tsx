@@ -19,7 +19,6 @@ import ServicesSection from '@/components/sections/services-section';
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [isAnimationReady, setIsAnimationReady] = useState(false);
-  const spotlightRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Hide the loading screen after a delay to allow animations to initialize.
@@ -32,19 +31,9 @@ export default function Home() {
         setIsAnimationReady(true);
     }, 2200);
 
-    const handleMouseMove = (event: MouseEvent) => {
-      if (spotlightRef.current) {
-        const { clientX, clientY } = event;
-        spotlightRef.current.style.background = `radial-gradient(600px at ${clientX}px ${clientY}px, rgba(45, 20, 100, 0.15), transparent 80%)`;
-      }
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-
     return () => {
         clearTimeout(timer);
         clearTimeout(animationTimer);
-        window.removeEventListener('mousemove', handleMouseMove);
     };
   }, []);
 
@@ -52,8 +41,7 @@ export default function Home() {
     <>
       <LoadingScreen isLoading={isLoading} />
       <div 
-        ref={spotlightRef}
-        className={`flex flex-col min-h-dvh bg-background transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        className={`flex flex-col min-h-dvh bg-transparent transition-opacity duration-500 ease-in-out ${isLoading ? 'opacity-0' : 'opacity-100'}`}
       >
         <Header />
         <main className="flex-grow">
