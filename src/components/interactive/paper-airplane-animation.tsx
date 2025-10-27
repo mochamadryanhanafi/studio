@@ -34,7 +34,7 @@ const PaperAirplaneAnimation = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     currentMount.appendChild(renderer.domElement);
 
-    const airplaneCount = 100;
+    const airplaneCount = 300;
     
     // Paper Airplane Geometry
     const airplaneGeometry = new THREE.BufferGeometry();
@@ -104,6 +104,7 @@ const PaperAirplaneAnimation = () => {
 
             dummy.position.set(plane.x, plane.y, plane.z);
             dummy.rotation.set(0, -plane.angle, Math.sin(plane.angle) * 0.2);
+            dummy.scale.set(0.5, 0.5, 0.5);
             dummy.updateMatrix();
             instancedMesh.setMatrixAt(i, dummy.matrix);
         });
@@ -135,7 +136,7 @@ const PaperAirplaneAnimation = () => {
     };
   }, [resolvedTheme]);
 
-  return <div ref={mountRef} className="absolute inset-0 z-0 h-full w-full opacity-20" />;
+  return <div ref={mountRef} className="absolute inset-0 z-0 h-full w-full opacity-10" />;
 };
 
 export default PaperAirplaneAnimation;
