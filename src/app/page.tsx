@@ -15,6 +15,7 @@ import AchievementsSection from '@/components/sections/achievements-section';
 import AnimateOnScroll from '@/components/interactive/animate-on-scroll';
 import LoadingScreen from '@/components/shared/loading-screen';
 import ServicesSection from '@/components/sections/services-section';
+import PaperAirplaneAnimation from '@/components/interactive/paper-airplane-animation';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,6 +48,7 @@ export default function Home() {
         <main className="flex-grow">
           <HeroSection />
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <PaperAirplaneAnimation />
             <AnimateOnScroll variant="zoom-in" isReady={isAnimationReady}>
               <ProfileCalloutSection />
             </AnimateOnScroll>
