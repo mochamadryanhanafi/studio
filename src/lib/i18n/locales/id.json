@@ -1,3 +1,4 @@
+
 {
   "header": {
     "about": "Tentang",
@@ -70,10 +71,10 @@
       "description": "Solusi canggih untuk bisnis yang memerlukan fitur AI/ML khusus seperti sistem rekomendasi atau analisis prediktif.",
       "priceRange": "Mulai dari Rp 5.000.000",
       "features": {
-        "feature1": "Mencakup semua fitur Web Database",
-        "feature2": "Model Machine Learning kustom",
-        "feature3": "API untuk integrasi model",
-        "feature4": "Analitik data tingkat lanjut"
+        "feature1": "Absensi pengenalan wajah",
+        "feature2": "Deteksi hitung otomatis",
+        "feature3": "Sistem rekomendasi produk",
+        "feature4": "Analitik data prediktif"
       }
     },
     "cta": "Diskusikan Proyek"
