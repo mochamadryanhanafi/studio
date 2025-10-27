@@ -84,11 +84,63 @@ body {
   }
   body {
     @apply bg-background text-foreground;
-     background-image: radial-gradient(circle at 25% 30%, hsl(var(--primary) / 0.1), transparent 40%),
-                      radial-gradient(circle at 75% 70%, hsl(var(--accent) / 0.1), transparent 40%);
-    background-attachment: fixed;
   }
 }
+
+@keyframes sunrise2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(150px, 50px);
+  }
+  50% {
+    transform: translate(300px, 10px);
+  }
+  75% {
+    transform: translate(150px, 50px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.sun, .sun2, .sun3 {
+  opacity: 0.3;
+  position: absolute;
+  width: 2200px;
+  height: 1200px;
+  border-radius: 50%;
+  animation-name: sunrise2;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  z-index: -1; /* Ensure it's in the background */
+}
+
+.sun {
+  background-color: red;
+  top: -1050px;
+  left: -300px;
+  animation-delay: 1s;
+  animation-duration: 10s;
+}
+
+.sun2 {
+  background-color: orange;
+  top: -1050px;
+  left: -1200px;
+  animation-delay: 2s;
+  animation-duration: 14s;
+}
+
+.sun3 {
+  background-color: yellow;
+  top: -1050px;
+  left: -600px;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
 
 @layer utilities {
   .aos-element {
