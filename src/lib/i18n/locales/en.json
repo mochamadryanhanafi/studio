@@ -58,7 +58,7 @@
     "database": {
       "title": "Web with Database",
       "description": "Perfect for dynamic websites like blogs, e-commerce, or platforms that need content and user data management.",
-      "priceRange": "Starts from IDR 1,000,000",
+      "priceRange": "Starts from IDR 999K",
       "features": {
         "feature1": "Includes all Static Web features",
         "feature2": "Database integration (SQL/NoSQL)",
