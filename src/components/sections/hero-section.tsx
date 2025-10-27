@@ -4,9 +4,17 @@ import { Badge } from '@/components/ui/badge';
 import { skills, type Skill } from '@/lib/data';
 import { useTranslation } from '@/lib/i18n';
 import AnimateOnScroll from '../interactive/animate-on-scroll';
+import { Button } from '@/components/ui/button';
+import { ArrowRight } from 'lucide-react';
 
 const HeroSection = () => {
   const { t } = useTranslation();
+
+   const handleScrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    document.querySelector('#services')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative w-full h-[calc(100dvh-8rem)] min-h-[500px] flex items-center justify-center text-center overflow-hidden">
       <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
@@ -17,6 +25,13 @@ const HeroSection = () => {
         <p className="mt-6 max-w-2xl text-lg text-foreground/80 sm:text-xl">
           {t('hero.subtitle')}
         </p>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+           <Button asChild size="lg">
+              <a href="#services" onClick={handleScrollToServices}>
+                My Services <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
+            </Button>
+        </div>
         <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           {skills.slice(0, 5).map((skill) => (
             <Badge key={skill.name} variant="default" className="text-sm py-2 px-4 shadow-md text-primary-foreground backdrop-blur-sm">
