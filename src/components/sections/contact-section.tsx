@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Send } from 'lucide-react';
+import { Phone } from 'lucide-react';
 import { useTranslation } from '@/lib/i18n';
 import Contact3D from '../interactive/contact-3d';
 
@@ -31,10 +31,9 @@ const ContactSection = () => {
   });
 
   const onSubmit: SubmitHandler<ContactFormValues> = (data) => {
-    const subject = `New message from ${data.name}`;
-    const body = `Name: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
-    const mailtoLink = `mailto:mochamadryanhanafi@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
+    const message = `Hello, my name is ${data.name}.\nMy email is ${data.email}.\n\nI'm interested in discussing a project.\n\nHere's my message:\n${data.message}`;
+    const whatsappLink = `https://wa.me/6285860516408?text=${encodeURIComponent(message)}`;
+    window.open(whatsappLink, '_blank');
     form.reset();
   };
 
@@ -95,7 +94,7 @@ const ContactSection = () => {
               <div className="text-center">
                 <Button type="submit" size="lg">
                   {t('contact.form.button.send')}
-                  <Send className="ml-2 h-4 w-4" />
+                  <Phone className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </form>
