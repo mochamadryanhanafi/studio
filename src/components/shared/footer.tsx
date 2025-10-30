@@ -1,5 +1,5 @@
 "use client";
-import { Github, Phone, Linkedin, Cloud } from 'lucide-react';
+import { Github, Phone, Linkedin, Code } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from '@/lib/i18n';
 
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container flex flex-col items-center justify-between gap-6 py-8 md:flex-row">
         <div className="flex items-center gap-2">
            <a href="#" className="flex items-center space-x-2">
-              <Cloud className="h-6 w-6 text-accent" />
+              <Code className="h-6 w-6 text-accent" />
               <span className="font-bold font-headline text-lg">Ryan Hanafi</span>
             </a>
         </div>
