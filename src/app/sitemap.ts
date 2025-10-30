@@ -1,8 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Ganti 'https://your-domain.com' dengan URL domain production Anda
-  const baseUrl = 'https://your-domain.com';
+  const baseUrl = 'https://ryanhanafi.netlify.app';
 
   return [
     {

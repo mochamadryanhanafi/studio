@@ -12,16 +12,16 @@ export const metadata: Metadata = {
   creator: 'Mochamad Ryan Hanafi',
   publisher: 'Mochamad Ryan Hanafi',
   verification: {
-    google: 'YOUR_GOOGLE_SITE_VERIFICATION_CODE', // Ganti dengan kode verifikasi Google Anda
+    google: 'QFKzMOeQ2fY_gRRumTIyqx2gNm1nbXpO2120qIY_Xrw',
   },
   openGraph: {
     title: 'Ryan Hanafi | Fullstack Developer Portfolio',
     description: 'Portfolio seorang Fullstack Developer yang bersemangat tentang Backend, Cloud, dan AI.',
-    url: 'https://your-domain.com', // Ganti dengan domain Anda
+    url: 'https://ryanhanafi.netlify.app',
     siteName: 'Ryan Hanafi Portfolio',
     images: [
       {
-        url: 'https://your-domain.com/og-image.png', // Ganti dengan URL gambar Open Graph Anda
+        url: 'https://ryanhanafi.netlify.app/og-image.png', // Ganti dengan URL gambar Open Graph Anda
         width: 1200,
         height: 630,
         alt: 'Mochamad Ryan Hanafi Portfolio',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ryan Hanafi | Fullstack Developer Portfolio',
     description: 'Jelajahi portfolio Mochamad Ryan Hanafi, seorang developer dengan keahlian di backend, cloud, dan machine learning.',
-    creator: '@your_twitter_handle', // Ganti dengan handle Twitter Anda
-    images: ['https://your-domain.com/twitter-image.png'], // Ganti dengan URL gambar Twitter Anda
+    creator: '@mochamadryanh',
+    images: ['https://ryanhanafi.netlify.app/twitter-image.png'], // Ganti dengan URL gambar Twitter Anda
   },
   icons: {
     icon: '/favicon.ico',

@@ -1,14 +1,13 @@
 import { MetadataRoute } from 'next'
  
 export default function robots(): MetadataRoute.Robots {
-  // Ganti 'https://your-domain.com' dengan URL domain production Anda
-  const baseUrl = 'https://your-domain.com';
+  const baseUrl = 'https://ryanhanafi.netlify.app';
 
   return {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: '/private/', // Contoh jika ada halaman private yang tidak ingin di-crawl
+      disallow: '/private/',
     },
     sitemap: `${baseUrl}/sitemap.xml`,
   }
