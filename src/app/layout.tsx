@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   creator: 'Mochamad Ryan Hanafi',
   publisher: 'Mochamad Ryan Hanafi',
   verification: {
-    google: 'QFKzMOeQ2fY_gRRumTIyqx2gNm1nbXpO2120qIY_Xrw',
+    google: 'XBCHQFoZi9LrlNfRJg4rNtBf9h92jB_eswLXYjNlljE',
   },
   openGraph: {
     title: 'Ryan Hanafi | Fullstack Developer Portfolio',
