@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     images: ['https://ryanhanafi.netlify.app/twitter-image.png'], // Ganti dengan URL gambar Twitter Anda
   },
   icons: {
-    icon: '/cloud-computing.png',
+    icon: '/favicon.ico',
     shortcut: '/favicon-16x16.png',
     apple: '/apple-touch-icon.png',
   },
